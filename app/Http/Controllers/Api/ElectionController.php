@@ -1,0 +1,37 @@
+<?php
+
+namespace App\Http\Controllers\Api;
+
+use App\Models\Election;
+use App\Models\Contestant;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class ElectionController extends Controller
+{
+    public function elections(Request $request){
+         
+        $elections = Election::all();
+
+        return response()->json([
+            'success' => true,
+            'data' => $elections
+        ]);
+    }
+
+    public function contestants(Request $request){
+
+        $request->validate([
+            'election_id' => 'required|integer|exists:elections,id',
+        ]);
+
+        $election_id = $request->election_id;
+        $election = Election::findOrFail($election_id);
+        $contestants = $election->contestants;
+
+        return response()->json([
+            'success' => true,
+            'data' => $contestants
+        ]);
+    }
+}
