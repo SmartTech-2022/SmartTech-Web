@@ -56,7 +56,7 @@
 
 
             <hr>
-            <button type="submit" class="btn btn-outline-info w-30 btn-lg">Submit</button><br><br>
+            <button type="submit" class="btn btn-outline-success w-30 btn-lg">Submit</button><br><br>
 
         </form>
     </div>
