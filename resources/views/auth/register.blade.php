@@ -11,7 +11,7 @@
 
     <h5>   Please Create a User  Account  </h5>
 
-        <form method="POST" action="{{ route('user.store') }}" class="border py-3 px-3 rounded" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('auth.register') }}" class="border py-3 px-3 rounded" enctype="multipart/form-data">
 
             <div class="mb-3">
                 @csrf
