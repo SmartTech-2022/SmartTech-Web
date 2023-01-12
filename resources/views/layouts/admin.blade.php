@@ -39,6 +39,7 @@
 </nav>
         @yield('content')
         @yield('users')
+        
 
 <div class="bg-info">
 <div class="container">
