@@ -1,4 +1,4 @@
-
+@extends('layouts.admin')
 @section('content')
 
 <div class="container my-5 py-5">
@@ -23,7 +23,7 @@
          <hr>
          <div class="mb-3">
 
-             <input type="text" name="about" class="form-control @error('about') is-invalid @enderror"  id="about" placeholder="about" value="">
+             <textarea type="text" name="about" class="form-control @error('about') is-invalid @enderror"  id="about" placeholder="about" value="">About Contestant</textarea>
              @error('about')
                  <small class="text-danger"> {{ $message }}</small>
              @enderror
@@ -31,9 +31,9 @@
          <hr>
          <div class="mb-3">
 
-             <input class="form-control @error('electionId') is-invalid @enderror" name="electionId"  id="electionId"placeholder="electionId">
+             <input class="form-control @error('election_name') is-invalid @enderror" name="election_name"  id="election_name"placeholder="election_name">
 
-             @error('electionId')
+             @error('election_name')
                  <small class="text-danger"> {{ $message }}</small>
              @enderror
          </div>

@@ -17,7 +17,7 @@ class VoterController extends Controller
 {
     //
     public function create() {
-        $voters = Voter::all();
+        // $voters = Voter::all();
         return view('voters.create');
     }
 
@@ -42,8 +42,9 @@ class VoterController extends Controller
         $voter = Voter::findOrFail($id);
         $valid = $request->validate([
             'voterId' => 'max:255|min:5',
+
             'password' => 'min:5',
-           ,
+
         ]);
         $voter->update(array_merge($valid));
         return redirect()->back()->withInput($request->input())->with('message', 'Voter Updated');
