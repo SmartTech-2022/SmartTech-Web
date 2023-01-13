@@ -10,8 +10,8 @@ class Vote extends Model
 {
     use HasFactory;
 
-    public function contestants()
+    public function contestant()
     {
-        return $this->hasMany(Contestant::class);
+        return $this->belongsTo(Contestant::class);
     }
 }

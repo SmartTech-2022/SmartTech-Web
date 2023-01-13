@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Election;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -14,14 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('contestants', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->foreignIdFor(Election::class);
-
-            $table->longText('about');
-            $table->string('position');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            //
+            $table->string('voter_id');
         });
     }
 
@@ -32,6 +26,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contestants');
+        Schema::table('users', function (Blueprint $table) {
+            //
+            
+        });
     }
 };
