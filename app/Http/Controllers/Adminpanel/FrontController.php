@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Adminpanel;
+use App\Http\Controllers\Controller;
+ use App\Http\Controllers\Adminpanel\FrontController;
 use App\Models\User;
 use App\Models\Users;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Adminpanel;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
- use App\Http\Controllers\VoterController;
+ use App\Http\Controllers\Adminpanel\VoterController;
 use App\Models\Voter;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;

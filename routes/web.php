@@ -1,11 +1,15 @@
 <?php
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers;
+use App\Http\Controllers\Adminpanel;
+use App\Http\Controllers\Adminpanel\FrontController;
+use App\Http\Controllers\Adminpanel\UserController;
+use App\Http\Controllers\Adminpanel\VoterController;
+use App\Http\Controllers\Adminpanel\ElectionController;
+use App\Http\Controllers\Adminpanel\ContestantController;
+use App\Http\Controllers\Adminpanel\VotesController;
 
 
-use App\Http\Controllers\ElectionController;
-use App\Http\Controllers\ContestantController;
-use App\Http\Controllers\{FrontController, UsersController, VoterController};
 
 
 /*

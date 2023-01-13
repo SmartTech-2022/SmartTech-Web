@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Adminpanel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
- use App\Http\Controllers\ElectionController;
+ use App\Http\Controllers\Adminpanel\ElectionController;
 use App\Models\Election;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
