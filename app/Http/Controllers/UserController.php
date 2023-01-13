@@ -31,6 +31,7 @@ class UserController extends Controller
             'name' => 'max:255|min:5',
             'email' => 'min:5',
             'phone number' => 'min:10',
+            'password' => 'min:5',
 
         ]);
         User::create(array_merge($valid));
@@ -54,6 +55,7 @@ class UserController extends Controller
             'name' => 'max:255|min:5',
             'email' => 'min:5',
             'phone number' => 'min:10',
+            'password' => 'min:5',
         ]);
         $user->update(array_merge($valid));
         return redirect()->back()->withInput($request->input())->with('message', 'User Updated');
