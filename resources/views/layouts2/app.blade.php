@@ -45,7 +45,7 @@
                         <a class="nav-link custom-text-dark text-light" href="#" class="roboto">Login</a>
                       </li>
                       <li class="nav-item btn btn-sm btn-success mx-2">
-                        <a class="nav-link custom-text-dark text-light" href="#" class="roboto">Register</a>
+                        <a class="nav-link custom-text-dark text-light" href="#" class="roboto">Register here</a>
                       </li>
                     </ul>
                 </div>
