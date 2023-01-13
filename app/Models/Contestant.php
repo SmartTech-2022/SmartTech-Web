@@ -9,14 +9,15 @@ class Contestant extends Model
 {
     use HasFactory;
 
+
     public function election()
     {
         return $this->belongsTo(Election::class);
     }
 
-    public function contestant()
+    public function votes()
     {
-        return $this->belongsTo(Contestant::class);
+        return $this->hasMany(Votes::class);
     }
 
     public function getContestant($id){
