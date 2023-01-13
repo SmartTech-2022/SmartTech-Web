@@ -1,10 +1,10 @@
 <?php
 
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Adminpanel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
- use App\Http\Controllers\ContestantController;
+ use App\Http\Controllers\Adminpanel\ContestantController;
 use App\Models\Contestant;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;

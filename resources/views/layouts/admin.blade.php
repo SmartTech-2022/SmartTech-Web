@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Dashboard - Brand</title>
+    <title>Smart Tech Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -22,9 +22,9 @@
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link active" href="auth.login"><i class="fas fa-user-circle"></i><span>Login</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="login-user"><i class="fas fa-user-circle"></i><span>Login</span></a></li>
                     <li class="nav-item"><a class="nav-link active" href="/"><i class="fas fa-user-circle"></i><span>Dashboard</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="auth.register"><i class="fas fa-user"></i><span>Register</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="create-user"><i class="fas fa-user"></i><span>Register</span></a></li>
                     <li class="nav-item"><a class="dropdown dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fas fa-user-circle"></i><span>Contestant</span>
                     </a>
@@ -34,7 +34,7 @@
                     </ul>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="contestant-create"><i class="fas fa-user-circle"></i><span> Election</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="election-create"><i class="fas fa-user-circle"></i><span> Election</span></a></li>
 
                     <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user-circle"></i><span>Votes</span></a></li>
                     <li class="nav-item"><a class="dropdown dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -45,7 +45,7 @@
                           <li><a class="dropdown-item" href="#">View Voters</a></li>
                         </ul>
                     </li>
-                        
+
                 </ul>
 
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
@@ -79,16 +79,16 @@
                 </nav>
             </div>
 
-            
+
              @yield('content')
              @yield('users')
         <footer class="py-3 my-4">
-            <p class="text-center text-muted">© 2023 Voting System, Inc</p>
+            <p class="text-center text-muted">© 2023 eVotes powered by SmartTech, Inc</p>
         </footer>
     </div>
 
-   
-   
+
+
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/chart.min.js"></script>
     <script src="assets/js/bs-init.js"></script>

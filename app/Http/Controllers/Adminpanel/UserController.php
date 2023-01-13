@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Adminpanel;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
- use App\Http\Controllers\UserController;
+ use App\Http\Controllers\Adminpanel\UserController;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -65,6 +65,11 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         $user->delete();
         return redirect()->route('home')->with('message', 'User Deleted');
+    }
+
+
+    public function login(){
+        return view('users.login');
     }
 }
 
