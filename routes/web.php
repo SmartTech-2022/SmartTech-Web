@@ -28,6 +28,8 @@ use App\Http\Controllers\{FrontController, UsersController, VoterController};
 Route::get('/', [FrontController::class, 'index']);
 
 Route::get('/create-user', [UserController::class, 'create']);
+Route::get('/login-user', [UserController::class, 'login']);
+
 Route::post('/create-user', [UserController::class, 'store'])->name('user.store');
 Route::get('/user/{id}', [UserController::class, 'show'])->name('user.show');
 
@@ -44,11 +46,14 @@ Route::delete('/voters/{id}',[VoterController::class, 'destroy']);
 
 // elections route
 
-Route::get('/election-create', [ElectionController::class, 'create']);
-Route::post('/election', [ElectionController::class, 'store'])->name('election.store');
-Route::get('/election/{id}/edit',[ElectionController::class, 'edit'])->name('election.edit');
-Route::patch('/election/{id}',[ElectionController::class, 'update'])->name('election.update');
-Route::delete('/election/{id}',[ElectionController::class, 'destroy']);
+
+Route::get('/election', [ElectionController::class, 'index'])->name('home');
+Route::get('/election/{id}', [ElectionController::class, 'show'])->name('election.show');
+Route::get('election-create', [ElectionController::class, 'create'])->name('elections.create');
+Route::post('election-create', [ElectionController::class, 'store'])->name('election.store');
+Route::get('election/edit/{id}', [ElectionController::class, 'edit'])->name('elections.edit');
+Route::post('election/edit/{id}', [ElectionController::class, 'update'])->name('elections.update');
+Route::get('election/delete/{id}', [ElectionController::class, 'destroy'])->name('election.destroy');
 
 
 

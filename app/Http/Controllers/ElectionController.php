@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
+use Illuminate\Pagination\Paginator;
 
 class ElectionController extends Controller
 {
@@ -19,47 +20,58 @@ class ElectionController extends Controller
 
 
 
+         public function index(){
+             Paginator::useBootstrap();
+             $elections = Election::paginate(2);
+             return view('elections.index', ['elections' => $elections]);
 
-        //
-        public function create() {
-            // $voters = Voter::all();
-            return view('elections.create');
-        }
+         }
 
-        public function store(Request $request) {
-            $valid = $request->validate([
-                'Election->name' => 'min:5',
-                'Election->status' => 'min:5',
+         public function create(){
+             return view('elections.create');
 
-            ]);
-           Election::create(array_merge($valid));
-            return redirect()->back()->withInput($request->input())->with('message', 'Election Created');
+         }
 
+         public function store(Request $request){
+             $valid = $request->validate([
+                 'name' => 'required',
+                 'active' => 'required',
 
-        }
+             ]);
+             Election::create($valid);
+             return redirect()->back()->with('message', 'election created');
+         }
 
-        public function edit($id) {
-            $election = Election::findOrFail($id);
-            return view('Elections.edit');
-        }
+         public function show($name){
+             $election = Election::where('name', $name)->first();
+             return view('election', ['election' => $election]);
+         }
 
-        public function update(Request $request, $id) {
-            $election = Election::findOrFail($id);
-            $valid = $request->validate([
-                'Election->name' => 'min:5',
-                'Election->status' => 'min:5',
+         public function edit($id){
+             $election = Election::findOrFail($id);
+             return view('elections.edit', ['election'=> $election]);
+         }
 
-            ]);
-            $election->update(array_merge($valid));
-            return redirect()->back()->withInput($request->input())->with('message', 'Election Updated');
-        }
+         public function update(Request $request, $id){
+             $election = Election::find($id);
+             $valid = $request->validate([
+                 'name' => 'required|unique:elections',
+                 'active' => 'required'
+             ]);
 
-        public function destroy($id){
-            $election = Election::findOrFail($id);
-            $election->delete();
-            return redirect()->route('home')->with('message', 'Election Deleted');
-        }
-    }
+             $election->update([
+                 'name' => $request->name,
+                 'active' => $request->active,
+             ]);
+             return redirect()->back()->with('message', 'Election Updated');
+         }
+         public function destroy($id){
+             $election = Election::find($id);
+             $election->delete();
+             return redirect()->back()->with('messaged', 'Election deleted');
+
+         }
+     }
 
 
 

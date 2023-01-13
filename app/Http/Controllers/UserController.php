@@ -66,6 +66,11 @@ class UserController extends Controller
         $user->delete();
         return redirect()->route('home')->with('message', 'User Deleted');
     }
+
+
+    public function login(){
+        return view('users.login');
+    }
 }
 
 
