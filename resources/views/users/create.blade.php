@@ -54,7 +54,7 @@
 
             <hr>
             <div class="mb-3">
-                <label for="image" class="form-label">Add Image: </label><br>
+                <label for="image" class="form-label">Upload a Passport  </label><br>
                 <input type="file" name="fileToUpload" id="image">
             </div>
 

@@ -10,11 +10,17 @@ use Illuminate\Http\Request;
 
 class FrontController extends Controller
 {
+
+    // public function  Home(){
+    //     return view('index');
+    // }
+
     //
     public function index(){
         return view('index');
 
     }
+
 
     public function adminindex() {
         return view('admin.index');
