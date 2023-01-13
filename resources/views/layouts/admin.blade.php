@@ -23,8 +23,9 @@
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
                     <li class="nav-item"><a class="nav-link active" href="login-user"><i class="fas fa-user-circle"></i><span>Login</span></a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/"><i class="fas fa-user-circle"></i><span>Dashboard</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="create-user"><i class="fas fa-user"></i><span>Register</span></a></li>
+
+                    <li class="nav-item"><a class="nav-link active" href="/"><i class="fas fa-user-circle"></i><span>Dashboard</span></a></li>
                     <li class="nav-item"><a class="dropdown dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fas fa-user-circle"></i><span>Contestant</span>
                     </a>
