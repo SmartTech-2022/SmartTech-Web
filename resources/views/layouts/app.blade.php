@@ -48,7 +48,7 @@
       <li class="nav-item"><a href="/create-blog" class="nav-link px-2 text-light">Elections</a></li>
       {{-- <li class="nav-item"><a href="#" class="nav-link px-2 text-light">About</a></li> --}}
     </ul>
-    <p class="text-center text-light">© 2022 eVotes powered by SmartTech, Inc</p>
+    <p class="text-center text-light">© 2023 eVotes powered by SmartTech, Inc</p>
   </footer>
 </div>
 </div>

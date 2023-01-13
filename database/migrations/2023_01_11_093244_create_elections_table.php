@@ -15,7 +15,10 @@ return new class extends Migration
     {
         Schema::create('elections', function (Blueprint $table) {
             $table->id();
+            $table->string('election_name');
+            $table->string('active');
             $table->timestamps();
+
         });
     }
 
