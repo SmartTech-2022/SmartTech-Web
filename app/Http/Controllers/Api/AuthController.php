@@ -17,14 +17,18 @@ class AuthController extends Controller
 
         // Validate the request data
         $validatedData = $request->validate([
-            'voter_id' => ['required', 'string', 'exists:users,voter_id', 'max:255'],
+            'voter_id' => ['required', 'string', 'max:255'],
             'password' => ['required', 'string', 'min:8'],
         ]);
 
         // Attempt to authenticate the user
-        if (!Auth::attempt($validatedData)) {
-            return response()->json(['message' => 'Email or Password not correct'], 401);
+        $user = User::where('voter_id', $request->input('voter_id'))->first();
+
+        if(!Hash::check($request->input('password'), $user->password)){
+            return response()->json(['message' => 'Voter id does not exist'], 401);
         }
+        
+        Auth::login($user);
 
         return response()->json(["message" => "Login Successful", "user" => auth()->user(), 'token' => auth()->user()->createToken(config('app.key'))->plainTextToken,]);
     }
