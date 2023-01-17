@@ -21,8 +21,8 @@ class ContestantController extends Controller
 
     public function store(Request $request) {
         $valid = $request->validate([
-            'Contestant->name' => 'max:255|min:5',
-            'Election->name' => 'min:5',
+            'Contestant_name' => 'max:255|min:5','required',
+            'Election_name' => 'min:5', 'required'
 
         ]);
         Contestant::create(array_merge($valid));
@@ -39,8 +39,8 @@ class ContestantController extends Controller
     public function update(Request $request, $id) {
         $contestant = Contestant::findOrFail($id);
         $valid = $request->validate([
-            'Contestant->name' => 'max:255|min:5',
-            'Election->name' => 'min:5',
+            'Contestant_name' => 'max:255|min:5','required',
+            'Election_name' => 'min:5', 'required'
 
         ]);
         $contestant->update(array_merge($valid));

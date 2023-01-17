@@ -29,7 +29,7 @@ use App\Http\Controllers\Adminpanel\VotesController;
 
 
 // users route
-// Route::get('/', [FrontController::class, index]);
+Route::get('/', [FrontController::class, 'index']);
 Route::get('/', [FrontController::class, 'adminindex']);
 
 Route::get('/create-user', [UserController::class, 'create']);

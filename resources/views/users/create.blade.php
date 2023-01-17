@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.app')
 
 @section('content')
    {{-- <div class="container-fluid  py-3"> --}}
@@ -16,7 +16,7 @@
     <div class="card p-2 m-3 md-shadow">
         <h6>  Register User </h6>
         <form method="POST" action="{{ route('user.store') }}" class="border py-3 px-3 rounded" enctype="multipart/form-data">
-
+            @csrf
             <div class="mb-3">
                 @csrf
                 <input type="text" name="name" class="form-control  @error('name') is-invalid @enderror" id="name" placeholder="Name" value="">
@@ -43,7 +43,7 @@
             </div>
             <div class="mb-3">
 
-                <input class="form-control @error('password') is-invalid @enderror" name="password"  id="password"placeholder="Password">
+                <input  type="password" class="form-control @error('password') is-invalid @enderror" name="password"  id="password"placeholder="Password">
 
                 @error('password')
                     <small class="text-danger"> {{ $message }}</small>

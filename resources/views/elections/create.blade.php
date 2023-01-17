@@ -17,7 +17,7 @@
 
         <form method="POST" action="{{ route('election.store') }}" class="border py-3 px-3 rounded" enctype="multipart/form-data">
 
-
+            @csrf
 
             <div class="mb-3">
 

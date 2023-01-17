@@ -23,7 +23,7 @@
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
                     <li class="nav-item"><a class="nav-link active" href="login-user"><i class="fas fa-user-circle"></i><span>Login</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="create-user"><i class="fas fa-user"></i><span>Register</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="create-user"><i class="fas fa-user"></i><span>Register User</span></a></li>
 
                     <li class="nav-item"><a class="nav-link active" href="/"><i class="fas fa-user-circle"></i><span>Dashboard</span></a></li>
                     <li class="nav-item"><a class="dropdown dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -38,14 +38,14 @@
                     <li class="nav-item"><a class="nav-link" href="election-create"><i class="fas fa-user-circle"></i><span> Election</span></a></li>
 
                     <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user-circle"></i><span>Votes</span></a></li>
-                    <li class="nav-item"><a class="dropdown dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{-- <li class="nav-item"><a class="dropdown dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-user-circle"></i><span>Voters</span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                           <li><a class="dropdown-item" href="voters-create">Add Voter</a></li>
                           <li><a class="dropdown-item" href="#">View Voters</a></li>
                         </ul>
-                    </li>
+                    </li> --}}
 
                 </ul>
 

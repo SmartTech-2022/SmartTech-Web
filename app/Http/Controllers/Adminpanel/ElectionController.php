@@ -34,7 +34,7 @@ class ElectionController extends Controller
 
          public function store(Request $request){
              $valid = $request->validate([
-                 'name' => 'required',
+                 'election_name' => 'required',
                  'active' => 'required',
 
              ]);
@@ -42,8 +42,8 @@ class ElectionController extends Controller
              return redirect()->back()->with('message', 'election created');
          }
 
-         public function show($name){
-             $election = Election::where('name', $name)->first();
+         public function show($election_name){
+             $election = Election::where('election_name', $election_name)->first();
              return view('election', ['election' => $election]);
          }
 
@@ -55,12 +55,12 @@ class ElectionController extends Controller
          public function update(Request $request, $id){
              $election = Election::find($id);
              $valid = $request->validate([
-                 'name' => 'required|unique:elections',
+                 'election_name' => 'required|unique:elections',
                  'active' => 'required'
              ]);
 
              $election->update([
-                 'name' => $request->name,
+                 'election_name' => $request->name,
                  'active' => $request->active,
              ]);
              return redirect()->back()->with('message', 'Election Updated');

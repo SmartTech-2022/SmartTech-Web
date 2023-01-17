@@ -34,6 +34,7 @@ class UserController extends Controller
             'password' => 'min:5',
 
         ]);
+        $voter_id = 'SMT'.strtoupper(Str::random(3)).'/'.rand(10000,99999);
         User::create(array_merge($valid));
         return redirect()->back()->withInput($request->input())->with('message', 'Account Created');
 

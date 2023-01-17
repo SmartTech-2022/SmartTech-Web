@@ -18,7 +18,7 @@ use App\Http\Controllers\Api\ElectionController;
 */
 // Auth
 Route::post('login', [AuthController::class, 'login']);
-Route::post('register', [AuthController::class, 'register']);79+
+Route::post('register', [AuthController::class, 'register']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });

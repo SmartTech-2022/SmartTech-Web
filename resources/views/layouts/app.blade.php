@@ -15,7 +15,7 @@
 
     <div class="div">
 
-    <nav class="navbar navbar-expand-lg bg-info">
+    <nav class="navbar navbar-expand-lg bg-success">
   <div class="container-fluid">
     <a class="navbar-brand text-light" href="/">One Vote</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,12 +40,12 @@
         @yield('content')
         @yield('users')
 
-<div class="bg-info">
+<div class="bg-success">
 <div class="container">
   <footer class="py-3 my-4">
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
       <li class="nav-item"><a href="/" class="nav-link px-2 text-light">Home</a></li>
-      <li class="nav-item"><a href="/create-blog" class="nav-link px-2 text-light">Elections</a></li>
+      <li class="nav-item"><a href="/Elections" class="nav-link px-2 text-light">Elections</a></li>
       {{-- <li class="nav-item"><a href="#" class="nav-link px-2 text-light">About</a></li> --}}
     </ul>
     <p class="text-center text-light">© 2023 eVotes powered by SmartTech, Inc</p>

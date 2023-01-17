@@ -16,9 +16,9 @@
  <h6>   Add a Contestant   </h6>
 
      <form method="POST" action="{{ route('contestant.store') }}" class="border py-3 px-3 rounded" enctype="multipart/form-data">
-
+        @csrf
          <div class="mb-3">
-             @csrf
+
              <input type="text" name="contestant_name" class="form-control  @error('contestant_name') is-invalid @enderror" id="contestant_name" placeholder="Contestant_name" value="">
              @error('contestant_name')
                  <small class="text-danger"> {{ $message }}</small>
