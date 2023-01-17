@@ -34,7 +34,7 @@ class AdminController extends Controller
         $user->name = $request->input('name');
         $user->email = $request->input('email');
         $user->password = Hash::make($request->input('password'));
-        $user->voter_id = 'SMT'.strtoupper(Str::random(3)).'/'.rand(10000,99999);
+        $user->voter_id = 'SMT'.'/'.strtoupper(Str::random(3)).'/'.rand(10000,99999);
         $user->save();
         Mail::to($user)->send(new UserCreated($user));
 
