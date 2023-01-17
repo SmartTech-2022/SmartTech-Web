@@ -22,7 +22,7 @@
 <body>
     <div class="container-fluid">
 
-        <nav class="navbar navbar-expand-lg bg-light navbar-light mx-4" id="navbar1">            
+        <nav class="navbar navbar-expand-lg bg-light navbar-light mx-4 sticky-top" id="navbar1">            
               <div id="brand-container" >
               <a class="navbar-brand" href="#"><img src="{{ asset('image/logo.png')}}" alt=""></a>
               </div>
@@ -35,17 +35,17 @@
                       <li class="nav-item">
                         <a class="nav-link custom-text-dark" aria-current="page" href="#" class="roboto">Home</a>
                       </li>
-                      <li class="nav-item">
+                      <!-- <li class="nav-item">
                         <a class="nav-link custom-text-dark" id="campaign" href="#" class="roboto">Campaign</a>
-                      </li>
+                      </li> -->
                       <li class="nav-item">
-                        <a class="nav-link custom-text-dark" href="#" class="roboto">About Us</a>
+                        <a class="nav-link custom-text-dark" href="#aboutUs" class="roboto">About Us</a>
                       </li>
-                      <li class="nav-item btn btn-sm btn-success mx-2">
+                      <!-- <li class="nav-item btn btn-sm btn-success mx-2">
                         <a class="nav-link custom-text-dark text-light" href="#" class="roboto">Login</a>
-                      </li>
+                      </li> -->
                       <li class="nav-item btn btn-sm btn-success mx-2">
-                        <a class="nav-link custom-text-dark text-light" href="#" class="roboto">Register here</a>
+                        <a class="nav-link custom-text-dark text-light" href="#contactUs" class="roboto">Contact Us</a>
                       </li>
                     </ul>
                 </div>

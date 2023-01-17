@@ -29,21 +29,21 @@
         </div>
     </div>
 
-    <!-- <div class="row mx-4 mt-3">
-        <div class="col-lg-5 col-md-5 col-sm-5 px-0">
+    <div class="row mx-4 mt-3">
+        <div class="col">
             <a href="">
-                <img class="img-fluid custom-height" src="{{ asset('image/image 1.png')}}" alt="" >
+                <img class="img-fluid custom-height" src="{{ asset('image/mobile store button AS.png')}}" alt="" >
             </a>
             
         </div>
-        <div class="col-lg-7 col-md-7 col-sm-7 px-0">
+        <div class="col d-flex justify-content-end">
             <a href="">
-                <img class="img-fluid custom-height" src="{{ asset('image/image 2-1.png')}}" alt="" >
+                <img class="img-fluid custom-height" src="{{ asset('image/mobile store button ps.png')}}" alt="" >
             </a>     
         </div>
-    </div> -->
+    </div>
 
-    <div class="row mx-4 mt-5">
+    <!-- <div class="row mx-4 mt-5">
         <div class="col-lg-3 col-md-6 p-1">
             <a href="">
                 <img class="img-fluid custom-height" src="{{ asset('image/compiled Rectangle 275.png')}}" alt="" >
@@ -64,7 +64,7 @@
                 <img class="img-fluid custom-height" src="{{ asset('image/compiled Rectangle 278.png')}}" alt="" >
             </a>            
         </div>
-    </div>
+    </div> -->
 
     <div class="row mt-3">
         <div class="col d-flex justify-content-center">
@@ -84,28 +84,19 @@
         </div>
     </div>
 
-    <!-- <div class="row mx-4 mt-3">
-        <div class="col-lg-4 offset-lg-4 d-flex justify-content-center p-2" id="purposeDiv">
-            <div class="row">
-                <div class="col">                    
-                    <div class="border border-success border-2 m-2 text-center">
-                        <h6><strong>Register to vote now</strong></h6>
-                        <p>For Nigerians who want to vote in 2023 Election</p>
-                    </div>
-                    <div class="border border-success border-2 m-2 text-center">
-                         <h6><strong>Register to vote now</strong></h6>
-                        <p>for anyone who wants to vote in BBNaija 2023 Eviction</p>
-                    </div>
-                    <div class="border border-success border-2 m-2 text-center">
-                        <h6><strong>Check your Registeration status</strong></h6>
-                        <p>for registered voters who wants to confirm their email</p>
-                    </div>
-                </div>
-            </div>
+    <div class="row mx-4 my-5">
+        <div class="col-lg-6 col-md-6" id="aboutUs">
+            <h4>About Us</h4>
+            <p> OneVote is an Electronic voting platform where anyone can cordinate their campaign easily. We help our users to find out the majority opinion of a group as easily and reliably as possible, no matter how large the number of participants is.
+            </p>
+            <p>
+            OneVote is operated by SmartTech group. We are currently one of the teams in Delta state innovation Hub Asaba, We have the Capacity to Reach out to the nation with our software products at maximum capacity. Our mission is to make interaction in larger groups as easy as possible. To achieve this, we build an electronic voting tools that everyone can easily participate in. We value reliability, precision and fast work and don't need complicated structures in the company. This allows us to work in a very agile way and implement new ideas quickly and easily.
+            </p>
+
         </div>
     </div>
 
-    <div class="row mx-4 mt-3">
+    <!-- <div class="row mx-4 mt-3">
         <div class="col-12 bg-secondary border-top border-5 border-primary text-light">
             warning
         </div>
@@ -137,8 +128,9 @@
             </div>
             <div class="col-lg-4">
              <form>
-                 <div class="form-group m-3">
-                   <input type="text" class="form-control" id="Name" placeholder="Name">
+                 <div class="form-group m-3" id="contactUs">
+                    <textarea name="message" id="" cols="30" rows="3" placeholder="Message" class="form-control"></textarea>
+                   <!-- <input type="text" class="form-control" id="Message" placeholder="Message"> -->
                  </div>
                 <div class="form-group m-3">
                   <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
@@ -149,7 +141,7 @@
                     Yes, I want to receive news and communications for about the Nigeria Elections and Others.
                    </label>
                  </div>
-                 <button type="submit" class="btn btn-primary m-3" class="roboto">Submit</button>
+                 <button type="submit" class="btn btn-primary mx-3 my-2" class="roboto">Submit</button>
              </form>            
             </div>
         </div>
