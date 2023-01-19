@@ -22,7 +22,7 @@
 <body>
     <div class="container-fluid">
 
-        <nav class="navbar navbar-expand-lg bg-light navbar-light mx-4 sticky-top" id="navbar1">            
+        <nav class="navbar navbar-expand-lg bg-light navbar-light m-4 sticky-top" id="navbar1">            
               <div id="brand-container" >
               <a class="navbar-brand" href="#"><img src="{{ asset('image/logo.png')}}" alt=""></a>
               </div>
@@ -35,32 +35,32 @@
                       <li class="nav-item">
                         <a class="nav-link custom-text-dark" aria-current="page" href="#" class="roboto">Home</a>
                       </li>
-                      <!-- <li class="nav-item">
-                        <a class="nav-link custom-text-dark" id="campaign" href="#" class="roboto">Campaign</a>
-                      </li> -->
                       <li class="nav-item">
-                        <a class="nav-link custom-text-dark" href="#aboutUs" class="roboto">About Us</a>
+                        <a class="nav-link custom-text-dark" id="campaign" href="#" class="roboto">Campaign</a>
                       </li>
-                      <!-- <li class="nav-item btn btn-sm btn-success mx-2">
-                        <a class="nav-link custom-text-dark text-light" href="#" class="roboto">Login</a>
-                      </li> -->
-                      <li class="nav-item btn btn-sm btn-success mx-2">
-                        <a class="nav-link custom-text-dark text-light" href="#contactUs" class="roboto">Contact Us</a>
+                      <li class="nav-item">
+                        <a class="nav-link custom-text-dark" href="#voteForYour" class="roboto">About Us</a>
+                      </li>
+                      <li class="nav-item btn btn-sm mx-2">
+                        <form role="search">
+                          <div class="input-group">
+                              <input type="text" class="form-control bg-light small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                              <div class="input-group-append">
+                                  <button class="btn btn-success" type="button">
+                                    Search
+                                  </button>
+                              </div>
+                          </div>
+                        </form>
                       </li>
                     </ul>
                 </div>
               </div>
             
-        </nav>
+        </nav><br>
         
         @yield('content')
 
-        <!-- <footer class="py-3 mx-4">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">not yet created</a></li>
-            </ul>
-            <p class="text-center text-muted">© 2022 evans, Inc</p>
-          </footer> -->
     </div>
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
 
