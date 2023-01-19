@@ -1,3 +1,5 @@
+
+
 .custom-text-dark{
     color: #001403;
 }
@@ -7,29 +9,29 @@
 }
 
 #p1-custom{
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 23px;
+    font-style: normal;
+    font-weight: 80;
+    font-size: 70px;
+    line-height: 80px;
     display: flex;
     align-items: center;
-    letter-spacing: 0.0015em;
+    letter-spacing: -0.0015em;
     color: #001403;
-
-
 }
 
 #p2-custom{
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.005em;
+    font-style: normal;
+    font-weight: 40;
+    font-size: 31px;
+    line-height: 40px;
     color: #000000;
 }
 
-#purposeDiv{
+
+/* #purposeDiv{
     background: #C9D7CB;
     opacity: 0.6; 
-}
+} */
 
 .text-center{
     color: green;
@@ -55,4 +57,14 @@
 #custom-italics{
     font-style: italics;
     font-family: 'Roboto', sans-serif;
+}
+
+#voteForYour{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 162.69%;   
+    text-align: justify;
+    color: #000000;
 }

@@ -67,7 +67,7 @@ class AuthController extends Controller
             //code...
             $validateUser = Validator::make($request->all(),
                 [
-                    'email' => 'required|email',
+                    'voter_id' => 'required|string',
                     'password' => 'required'
                 ]);
 
@@ -79,14 +79,14 @@ class AuthController extends Controller
                 ], 401);
                 }
 
-                if(!Auth::attempt($request->only(['email', 'password']))){
+                if(!Auth::attempt($request->only(['voter_id', 'password']))){
                 return response()->json([
                     'status' => false,
-                    'message' => 'Email and Password does not match with our record.'
+                    'message' => 'Voter ID or Password does not match with our record.'
                 ], 401);
                 }
 
-            $user = User::where('email', $request->email)->first();
+            $user = User::where('voter_id', $request->voter_id)->first();
 
             return response()->json([
                 'status' => true,
