@@ -67,7 +67,7 @@ class AuthController extends Controller
             //code...
             $validateUser = Validator::make($request->all(),
                 [
-                    'voter_id' => 'required|voter_id',
+                    'voter_id' => 'required|string',
                     'password' => 'required'
                 ]);
 
