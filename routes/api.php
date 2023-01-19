@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\VotesController;
 use App\Http\Controllers\Api\ElectionController;
+use App\Http\Controllers\Api\ContestantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,7 +43,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     Route::get('contestants', [ElectionController::class, 'contestants']);
     Route::post('votes', [VotesController::class, 'store']);
     Route::name('contestants.')->group(function () {
-        Route::get('contestants/{id}', 'ContestantController@show')->name('show');
+        Route::get('contestants/{id}', [ContestantController::class, 'show'])->name('show');
     });
 // });
 
