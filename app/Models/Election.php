@@ -8,14 +8,25 @@ use Illuminate\Database\Eloquent\Model;
 class Election extends Model
 {
     use HasFactory;
+
+
+    protected $guarded = ['id'];
+
+    public function contestants()
+
     protected $guarded = ['id'];
     public function contestant()
+
     {
         return $this->hasMany(Contestant::class);
     }
+
+
+
 
     public function votes()
     {
         return $this->hasMany(Vote::class);
     }
+
 }

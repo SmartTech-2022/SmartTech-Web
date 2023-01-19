@@ -20,7 +20,7 @@ return new class extends Migration
             $table->foreignIdFor(Election::class);
 
             $table->longText('about');
-            $table->string('position');
+            $table->string('position')->nullable();
             $table->timestamps();
         });
     }

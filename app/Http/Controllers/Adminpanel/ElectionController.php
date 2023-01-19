@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Adminpanel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
- use App\Http\Controllers\Adminpanel\ElectionController;
+
 use App\Models\Election;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -35,12 +35,11 @@ class ElectionController extends Controller
          public function store(Request $request){
              $valid = $request->validate([
                  'name' => 'required',
-                 'active' => 'required',
-
+                 'active' => 'required'
              ]);
              Election::create($valid);
-             return redirect()->back()->with('message', 'election created');
-         }
+             return redirect()->route('home')->withInput($request->input())->with('message', 'Election Created Successfully');
+            }
 
          public function show($name){
              $election = Election::where('name', $name)->first();

@@ -12,18 +12,18 @@
 
     <div class="col-md-6 offset-md-2">
 
-        <div class="card p-2 m-3 md-shadow">
+        <div class="card p-2 m-3 shadow-md">
     <h6>   Add Elections  </h6>
 
         <form method="POST" action="{{ route('election.store') }}" class="border py-3 px-3 rounded" enctype="multipart/form-data">
 
-
+            @csrf
 
             <div class="mb-3">
 
-                <input class="form-control @error('election_name') is-invalid @enderror" name="election_name"  id="election_name"placeholder="Election_name">
+                <input class="form-control @error('name') is-invalid @enderror" name="name"  id="name"placeholder="Name">
 
-                @error('election_name')
+                @error('name')
                     <small class="text-danger"> {{ $message }}</small>
                 @enderror
             </div>
@@ -40,7 +40,7 @@
 
 
             <hr>
-            <button type="submit" class="btn btn-outline-success w-30 btn-lg">Add</button><br><br>
+            <button type="submit" class="btn btn-outline-success w-30 btn-lg">Add Elections</button><br><br>
 
         </form>
     </div>

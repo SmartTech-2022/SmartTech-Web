@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="{{ asset("assets/fonts/fontawesome-all.min.css") }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <link rel="stylesheet" href="{{ asset("assets/fonts/font-awesome.min.css") }}">
     <link rel="stylesheet" href="{{ asset("assets/fonts/fontawesome5-overrides.min.css") }}">
 </head>
@@ -18,36 +19,44 @@
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion p-1" style="background: #027314">
             <div class="container-fluid d-flex flex-column px-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand mx-0" href="#">
                     <div class="sidebar-brand-text mx-0 ">
-                        <img src="image/logo.jpg  "width="200px"  alternative="logo"/></div>
+                        <img src="{{asset('image/logo.jpg')}}" width="200px"  alternative="logo"/></div>
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link active" href="login-user"><i class="fas fa-user-circle"></i><span>Login</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="create-user"><i class="fas fa-user"></i><span>Register</span></a></li>
 
-                    <li class="nav-item"><a class="nav-link active" href="/"><i class="fas fa-user-circle"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{route('users.create')}}"><i class="fas fa-user"></i><span>Register User</span></a></li>
+
+                    <li class="nav-item"><a class="nav-link active" href="{{route('home')}}"><i class="fas fa-user-circle"></i><span>Dashboard</span></a></li>
                     <li class="nav-item"><a class="dropdown dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fas fa-user-circle"></i><span>Contestant</span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                      <li><a class="dropdown-item" href="contestant-create">Add Contestant</a></li>
-                      <li><a class="dropdown-item" href="#">View Contestant</a></li>
+                      <li><a class="dropdown-item" href="{{route('contestant.create')}}">Add Contestant</a></li>
+                      <li><a class="dropdown-item" href="{{route('contestant.show')}}">View Contestant</a></li>
                     </ul>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="election-create"><i class="fas fa-user-circle"></i><span> Election</span></a></li>
 
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user-circle"></i><span>Votes</span></a></li>
+
                     <li class="nav-item"><a class="dropdown dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-user-circle"></i><span>Voters</span>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                          <li><a class="dropdown-item" href="voters-create">Add Voter</a></li>
-                          <li><a class="dropdown-item" href="#">View Voters</a></li>
-                        </ul>
+                        <i class="fas fa-user-circle"></i><span>Elections</span>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="{{ route('election.store') }}">Create Elections</a></li>
+                      <li><a class="dropdown-item" href="{{route('election.show')}}">View Elections</a></li>
+                    </ul>
                     </li>
 
-                </ul>
+
+
+
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user-circle"></i><span>Votes</span></a></li>
+
+                    <li class="nav-item"> <a class="nav-link active" href="/"> <i class="fa-solid fa-arrow-right-from-bracket"></i></i><span>Logout</span></a></li>
+
+
+
 
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
             </div>
@@ -56,7 +65,7 @@
             <div class="div">
                 <nav class="navbar navbar-expand-lg text-success">
                     <div class="container-fluid link-color">
-                        <a class="navbar-brand" href="#">Home</a>
+                        <a class="navbar-brand" href="{{url('/')}}">Home</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
