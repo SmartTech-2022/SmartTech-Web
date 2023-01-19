@@ -44,7 +44,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     Route::name('contestants.')->group(function () {
         Route::get('contestants/{id}', 'ContestantController@show')->name('show');
     });
-});
+// });
 
 //     // Election
 //     Route::get('elections', [ElectionController::class, 'elections']);
