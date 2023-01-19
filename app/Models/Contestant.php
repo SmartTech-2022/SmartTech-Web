@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Contestant extends Model
 {
     use HasFactory;
+    protected $with = ['votes'];
+    protected $guarded = ['id'];
 
+    protected $appends = ['contestant_vote'];
 
     public function election()
     {
@@ -17,11 +20,15 @@ class Contestant extends Model
 
     public function votes()
     {
-        return $this->hasMany(Votes::class);
+        return $this->hasMany(Vote::class);
     }
 
     public function getContestant($id){
         return self::find($id);
+    }
+    public function getContestantVoteAttribute(){
+        // return 0;
+        return $this->votes()->groupBy('contestant_id')->count();
     }
 }
 

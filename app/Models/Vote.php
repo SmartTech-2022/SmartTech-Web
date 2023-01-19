@@ -10,8 +10,16 @@ class Vote extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
     public function contestant()
     {
         return $this->belongsTo(Contestant::class);
     }
+
+    public function election()
+    {
+        return $this->belongsTo(Election::class);
+    }
+
+
 }
