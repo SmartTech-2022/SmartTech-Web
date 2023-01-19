@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 class ElectionController extends Controller
 {
     public function elections(Request $request){
-         
+
         $elections = Election::all();
 
         return response()->json([
@@ -32,6 +32,14 @@ class ElectionController extends Controller
         return response()->json([
             'success' => true,
             'data' => $contestants
+        ]);
+    }
+
+    public function show($id){
+        $election = Election::where('id',$id)->with('contestant')->first();
+        return response()->json([
+            'success' => true,
+            'data' => $election
         ]);
     }
 }

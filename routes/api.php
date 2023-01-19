@@ -28,10 +28,11 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
     // Election
     Route::get('elections', [ElectionController::class, 'elections']);
+    Route::get('elections/{id}', [ElectionController::class, 'show']);
 
     // contestant
     Route::get('contestants', [ElectionController::class, 'contestants']);
-    Route::post('store', [VotesController::class, 'store']);
+    Route::post('votes', [VotesController::class, 'store']);
     Route::name('contestants.')->group(function () {
     Route::get('contestants/{id}', 'ContestantController@show')->name('show');
     });
