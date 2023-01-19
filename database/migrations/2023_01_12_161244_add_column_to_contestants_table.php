@@ -15,10 +15,10 @@ return new class extends Migration
     {
 
             Schema::table('contestants', function (Blueprint $table) {
-                $table->string('image');
-                $table->string('gender');
-                $table->string('party');
-                $table->string('party_logo');
+                $table->string('image')->nullable();
+                $table->string('gender')->nullable();
+                $table->string('party')->nullable();
+                $table->string('party_logo')->nullable();
 
             });
 

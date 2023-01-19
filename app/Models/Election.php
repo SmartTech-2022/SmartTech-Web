@@ -9,10 +9,12 @@ class Election extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     public function contestants()
     {
         return $this->hasMany(Contestant::class);
     }
 
-    
+
 }

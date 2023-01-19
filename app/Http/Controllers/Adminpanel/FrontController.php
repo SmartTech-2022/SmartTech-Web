@@ -11,11 +11,11 @@ use Illuminate\Http\Request;
 class FrontController extends Controller
 {
 
-    // public function  Home(){
-    //     return view('index');
+    // public function  home(){
+    //     return view('users.create');
     // }
 
-    //
+
     public function index(){
         return view('index');
 

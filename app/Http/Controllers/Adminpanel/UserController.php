@@ -2,31 +2,32 @@
 
 namespace App\Http\Controllers\Adminpanel;
 
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
- use App\Http\Controllers\Adminpanel\UserController;
 use App\Models\User;
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
+use App\Http\Controllers\Controller;
+
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-
-use Illuminate\Support\Str;
-use Illuminate\Validation\Rule;
 
 
 class UserController extends Controller
 {
-    //
 
 
     public function create() {
-        $users = User::all();
+
+        // $users = User::all();
+        // dd($users);
         // return view('users.create', ['users' => $users]);
         return view('users.create');
 
     }
 
     public function store(Request $request) {
-        // dd($request->input('title'), $request->ip());
+        // dd($request->all());
         $valid = $request->validate([
             'name' => 'max:255|min:5',
             'email' => 'min:5',
@@ -34,15 +35,20 @@ class UserController extends Controller
             'password' => 'min:5',
 
         ]);
-        $voter_id = 'SMT'.strtoupper(Str::random(3)).'/'.rand(10000,99999);
+        $voter_id = 'SMT'.'/'.strtoupper(Str::random(3)).'/'.rand(10000,99999);
         User::create(array_merge($valid, ['voter_id'=>$voter_id, 'password' => bcrypt($valid['password'])]));
-        return redirect()->back()->withInput($request->input())->with('message', 'Account Created');
+       session()->flash('message', 'Voter Created Successfully');
+        return redirect()->route('home')->withInput($request->input());
+
 
 
     }
 
 
-
+public function show(){
+    $user= auth()->user();
+    return view('users.index', ['user', $user]);
+}
 
 
     public function edit($id) {
@@ -69,9 +75,29 @@ class UserController extends Controller
     }
 
 
-    public function login(){
+    public function login(Request $request) {
+        $validatedData = $request->validate([
+            'email' => ['required', 'string', 'max:255'],
+            'password' => ['required', 'string', 'min:8'],
+        ]);
+        // Attempt to authenticate the user
+        $user = User::where('email', $request->input('email'))->first();
+        if(!Hash::check($request->input('password'), $user->password)){
+            return redirect()->back()->withInput($request->input())->with('message', 'Login Details Does not Exist');
+        }
+        Auth::login($user);
+        return redirect()->route('home')->withInput($request->input())->with('message', 'Login Successful');
+
+    }
+
+
+
+    public function loginPage(){
         return view('users.login');
     }
 }
+
+
+
 
 

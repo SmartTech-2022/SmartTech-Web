@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
 use App\Http\Controllers\Adminpanel;
@@ -30,49 +31,39 @@ use App\Http\Controllers\Adminpanel\VotesController;
 
 // users route
 Route::get('/', [FrontController::class, 'index']);
-Route::get('/', [FrontController::class, 'adminindex']);
-
-Route::get('/create-user', [UserController::class, 'create']);
-Route::get('/login-user', [UserController::class, 'login']);
-
-Route::post('/create-user', [UserController::class, 'store'])->name('user.store');
-Route::get('/user/{id}', [UserController::class, 'show'])->name('user.show');
-
-// Route::get('/edit/{id}', [UserController::class, 'edit'])->name('user.edit');
-// Route::post('/edit/{id}', [UserController::class, 'update'])->name('user.update');
-
-// voters route
-Route::get('/voters-create', [VoterController::class, 'create']);
-Route::post('/voters', [VoterController::class, 'store'])->name('voter.store');
-Route::get('/voters/{id}/edit',[VoterController::class, 'edit'])->name('voters.edit');
-Route::patch('/voters/{id}',[VoterController::class, 'update'])->name('voters.update');
-Route::delete('/voters/{id}',[VoterController::class, 'destroy']);
-
-
-// elections route
-
-
-Route::get('/election', [ElectionController::class, 'index'])->name('home');
-Route::get('/election/{id}', [ElectionController::class, 'show'])->name('election.show');
-Route::get('election-create', [ElectionController::class, 'create'])->name('elections.create');
-Route::post('election-create', [ElectionController::class, 'store'])->name('election.store');
-Route::get('election/edit/{id}', [ElectionController::class, 'edit'])->name('elections.edit');
-Route::post('election/edit/{id}', [ElectionController::class, 'update'])->name('elections.update');
-Route::get('election/delete/{id}', [ElectionController::class, 'destroy'])->name('election.destroy');
 
 
 
-// contestants route
-Route::get('/contestant-create', [ContestantController::class, 'create']);
-Route::post('/contestant', [ContestantController::class, 'store'])->name('contestant.store');
-Route::get('/contestant/{id}/edit',[ContestantController::class, 'edit'])->name('contestant.edit');
-Route::patch('/contestant/{id}',[ContestantController::class, 'update'])->name('contestant.update');
-Route::delete('/contestant/{id}',[ContestantController::class, 'destroy']);
+Route::prefix('admin')->group(function () {
 
+    Route::middleware('guest')->group(function () {
+        Route::get('/login', [UserController::class, 'loginPage'])->name('login');
+        Route::post('/login', [UserController::class, 'login'])->name('user.store');
+    });
 
+    Route::middleware('auth')->group(function () {
+        Route::get('/', [FrontController::class, 'adminindex'])->name('home');
+        Route::get('users/create', [UserController::class, 'create'])->name('users.create');
+        Route::post('users/store', [UserController::class, 'store'])->name('users.store');
+        Route::get('/user}', [UserController::class, 'show'])->name('user.show');
+        // elections
+        Route::get('/election', [ElectionController::class, 'index'])->name('election.home');
+        Route::get('/election', [ElectionController::class, 'show'])->name('election.show');
+        Route::get('election-create', [ElectionController::class, 'create'])->name('elections.create');
+        Route::post('election-create', [ElectionController::class, 'store'])->name('election.store');
+        Route::get('election/edit/{id}', [ElectionController::class, 'edit'])->name('elections.edit');
+        Route::post('election/edit/{id}', [ElectionController::class, 'update'])->name('elections.update');
+        Route::get('election/delete/{id}', [ElectionController::class, 'destroy'])->name('election.destroy');
 
-
-
+        // contestants route
+        Route::get('/contestant-create', [ContestantController::class, 'create'])->name('contestant.create');
+        Route::post('/contestant', [ContestantController::class, 'store'])->name('contestant.store');
+        Route::get('/contestant', [ContestantController::class, 'show'])->name('contestant.show');
+        Route::get('/contestant/{id}/edit', [ContestantController::class, 'edit'])->name('contestant.edit');
+        Route::patch('/contestant/{id}', [ContestantController::class, 'update'])->name('contestant.update');
+        Route::delete('/contestant/{id}', [ContestantController::class, 'destroy']);
+    });
+});
 
 
 
@@ -95,4 +86,3 @@ Route::delete('/contestant/{id}',[ContestantController::class, 'destroy']);
 
 Route::get('about', [App\Http\Controllers\UsersController::class, 'about']);
 Route::get('contact', [App\Http\Controllers\UsersController::class, 'contact']);
-

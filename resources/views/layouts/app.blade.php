@@ -15,19 +15,20 @@
 
     <div class="div">
 
-    <nav class="navbar navbar-expand-lg bg-success">
+    <nav class="navbar navbar-expand-lg" style="background: #027314">
   <div class="container-fluid">
-    <a class="navbar-brand text-light" href="/">One Vote</a>
+    <div class="sidebar-brand-text mx-0 ">
+        <img src="{{asset('image/logo.jpg')}}" width="200px"  alternative="logo"/></div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active text-light" aria-current="page" href="/">Home</a>
+          <a class="nav-link active text-light" aria-current="page" href="/admin">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="/create-blog">Elections</a>
+          <a class="nav-link text-light" href="{{ route('election.store') }}">Elections</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -40,7 +41,7 @@
         @yield('content')
         @yield('users')
 
-<div class="bg-success">
+<div style="background: #027314">
 <div class="container">
   <footer class="py-3 my-4">
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
