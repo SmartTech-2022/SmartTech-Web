@@ -144,7 +144,7 @@
                  <div class="form-check m-3">
                    <input type="checkbox" class="form-check-input" id="checkbox">
                    <label class="form-check-label text-light" for="checkbox" class="roboto">
-                    Yes, I want to receive news and communications for about the Nigeria Elections and Others1.
+                    Yes, I want to receive news and communications for about the Nigeria Elections and Others2.
                    </label>
                  </div>
                  <button type="submit" class="btn btn-primary mx-3 my-2" class="roboto">Submit</button>
