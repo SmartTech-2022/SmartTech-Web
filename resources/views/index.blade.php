@@ -8,7 +8,9 @@
             <p id="p2-custom" class="roboto" id="futureVoting">Future voting systems, paving the path for worldwide expansion, precise analysis, and more top-notch services.
             </p>
             <div class="d-flex justify-content-center">
-                <button class="btn btn-success btn-lg px-5" type="submit">Getting started</button>
+                <a href="#download">
+                    <button class="btn btn-success btn-lg px-5" type="submit">Getting started</button>
+                </a>
             </div>
 
         </div>
@@ -39,24 +41,6 @@
             </div>
         </div><br>
         
-        <div class="row mt-3">
-            <div class="col d-flex justify-content-center">
-                <div id="whyChooseUs" class="roboto">Why Choose Us</div>
-            </div>
-        </div>
-         
-        <div class="row mx-4 mt-3">
-            <div class="col-lg-4 col-md-6 p-1">
-                <img class="img-fluid" src="{{ asset('image/group 82.png')}}" alt="" >            
-            </div>
-            <div class="col-lg-4 col-md-6 p-1">
-                <img class="img-fluid" src="{{ asset('image/group 83.png')}}" alt="" >            
-            </div>
-            <div class="col-lg-4 col-md-12 p-1">
-                <img class="img-fluid" src="{{ asset('image/group 84.png')}}" alt="" >            
-            </div>
-        </div>
-
 
 
 
@@ -67,7 +51,7 @@
         </div>
     </div>
 
-    <div class="row mx-4 mt-3">
+    <div class="row mx-4 mt-3" id="download">
         <div class="col">
             <a href="">
                 <img class="img-fluid custom-height" src="{{ asset('image/playstoreButton.png')}}" alt="" >
@@ -82,7 +66,29 @@
     </div><br>
 
 
-    <div class="row mx-4 mt-3">
+
+    <div class="row mt-3">
+            <div class="col d-flex justify-content-center">
+                <div id="whyChooseUs" class="roboto">Why Choose Us</div>
+            </div>
+        </div>
+         
+        <div class="row mx-4 mt-3">
+            <div class="col-lg-4 col-md-6 p-1 d-flex justify-content-center">
+                <img class="img-fluid" id="WCUI" src="{{ asset('image/group 82.png')}}" alt="" >            
+            </div>
+            <div class="col-lg-4 col-md-6 p-1 d-flex justify-content-center">
+                <img class="img-fluid" id="WCUI" src="{{ asset('image/group 83.png')}}" alt="" >            
+            </div>
+            <div class="col-lg-4 col-md-12 p-1 d-flex justify-content-center">
+                <img class="img-fluid" id="WCUI" src="{{ asset('image/group 84.png')}}" alt="" >            
+            </div>
+        </div>
+
+
+
+
+    <!-- <div class="row mx-4 mt-3">
         <div class="col">
                 <img class="img-fluid custom-height" src="{{ asset('image/registerToVote.png')}}" alt="" >        
         </div>
@@ -92,7 +98,7 @@
         <div class="col">
                 <img class="img-fluid custom-height" src="{{ asset('image/forReg.png')}}" alt="" >
         </div>
-    </div>
+    </div> -->
 
     <div class="row mx-4 my-5">
         <div class="col-lg-6 col-md-6" id="voteForYour">
@@ -101,7 +107,7 @@
         </div>
     </div>
 
-    <div class="row mx-4 mt-3">
+    <!-- <div class="row mx-4 mt-3">
         <div class="col-12 bg-secondary text-danger">
             warning
         </div>
@@ -110,12 +116,12 @@
             </p>
             <p>For more information kindly visit any of our branch offices, call or whatsapp +2348000088800</p>
         </div>
-    </div>
+    </div> -->
 
-
-    <footer id="footerbg" class="mx-4 mt-4">
+<div class="container-fluid">
+    <footer class="mt-4">
         <div class="row">
-            <div class="col-lg-4 text-light">
+            <div class="col-lg-3 text-light" id="footerBg1">
                 <div class="m-3" class="roboto">
                     SiteMap
                     Career Opportunities
@@ -124,14 +130,23 @@
                     Guidelines For Access to Public Record
                 </div>
             </div>
-             <div class="col-lg-4">
-                <div class="m-3">
-                    <a href=""><img class="img-fluid px-3" src="{{ asset('image/twitter.png')}}" alt=""></a>
-                    <a href=""><img class="img-fluid px-3" src="{{ asset('image/facebook.png')}}" alt=""></a>
-                    <a href=""><img class="img-fluid px-3" src="{{ asset('image/instagram.png')}}" alt=""></a>
+             <div class="col-lg-5" id="footerBg2">
+                <div class="my-5">
+                    <div class="m-3 d-flex justify-content-end">
+                        <a href=""><img class="img-fluid px-3" id="SMI" src="{{ asset('image/twitter.png')}}" alt=""></a>
+                        <a href=""><img class="img-fluid px-3" id="SMI" src="{{ asset('image/facebook.png')}}" alt=""></a>
+                        <a href=""><img class="img-fluid px-3" id="SMI" src="{{ asset('image/instagram.png')}}" alt=""></a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
+                <div class="row my-5">
+                    <div class="col d-flex justify-content-center">
+                        <p class="text-light" class="roboto">
+                          Copyright &#169; 2022 ONEVOTE
+                        </p>
+                    </div>
+                </div>
+             </div>
+            <div class="col-lg-4" id="footerBg3">
              <form>
                  <div class="form-group m-3" id="contactUs">
                    <input type="text" class="form-control" id="Message" placeholder="Message">
@@ -149,15 +164,12 @@
              </form>            
             </div>
         </div>
-        <div class="row">
-            <div class="col d-flex justify-content-center">
-                <p class="text-light" class="roboto">
-                    Copyright 2022 ONEVOTE Ministry Of science And Technology     Delta State Innovation Hub, DBS 
-                    Junction, Asaba, Delta State 223323      234-77608879
-                </p>
-            </div>
-        </div>
+
     </footer>
+</div>
+
+
+
 
 </section>
                         
