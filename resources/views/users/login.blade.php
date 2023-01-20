@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.app')
 @section('content')
 
     <div class="row">
@@ -14,15 +14,16 @@
 
         <div class="col-md-6 offset-md-3">
             <div class="card p-2 m-3 md-shadow">
-                <h6> Login Voter </h6>
+                <h6> Login Admin</h6>
 
                 <form method="post" action="{{ route('user.store') }}" class="border py-3 px-3 rounded" enctype="multipart/form-data">
-                    <div class="mb-3">
-                        @csrf
+                    @csrf
+                      <div class="mb-3">
+
                     {{-- <label for="VoterId" class="form-label">VoterId</label> --}}
-                    <input type="VoterId" id="VoterId" name="VoterId" class="form-control " value=""
-                        placeholder="VoterId">
-                        @error('VoterId')
+                    <input type="email" id="email" name="email" class="form-control " value=""
+                        placeholder="Email">
+                        @error('email')
                         <small class="text-danger"> {{ $message }}</small>
                     @enderror
                 </div>

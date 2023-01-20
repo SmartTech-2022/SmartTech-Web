@@ -11,12 +11,13 @@
 
 
 
+
      <div class="col-md-6 offset-md-2">
 
-    <div class="card p-2 m-3 md-shadow">
+    <div class="card p-2 m-3 shadow-md">
         <h6>  Register User </h6>
-        <form method="POST" action="{{ route('user.store') }}" class="border py-3 px-3 rounded" enctype="multipart/form-data">
-
+        <form method="POST" action="{{ route('users.store') }}" class="border py-3 px-3 rounded" enctype="multipart/form-data">
+            @csrf
             <div class="mb-3">
                 @csrf
                 <input type="text" name="name" class="form-control  @error('name') is-invalid @enderror" id="name" placeholder="Name" value="">
@@ -27,7 +28,7 @@
             <hr>
             <div class="mb-3">
 
-                <input type="text" name="email" class="form-control @error('email') is-invalid @enderror"  id="email" placeholder="Email" value="">
+                <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"  id="email" placeholder="Email" value="">
                 @error('email')
                     <small class="text-danger"> {{ $message }}</small>
                 @enderror
@@ -35,7 +36,7 @@
             <hr>
              <div class="mb-3">
 
-                <input class="form-control @error('phone number') is-invalid @enderror" name="phone number"  id="phone number"placeholder="Phone number">
+                <input  class="form-control @error('phone number') is-invalid @enderror" name="phone number"  id="phone number"placeholder="Phone number">
 
                 @error('phone number')
                     <small class="text-danger"> {{ $message }}</small>
@@ -43,7 +44,7 @@
             </div>
             <div class="mb-3">
 
-                <input class="form-control @error('password') is-invalid @enderror" name="password"  id="password"placeholder="Password">
+                <input  type="password" class="form-control @error('password') is-invalid @enderror" name="password"  id="password"placeholder="Password">
 
                 @error('password')
                     <small class="text-danger"> {{ $message }}</small>
@@ -66,5 +67,7 @@
     </div>
    </div>
    </div>
+
+
 @endsection
 
