@@ -21,6 +21,29 @@
 </head>
 <body>
 
+<nav class="navbar navbar-expand navbar-light bg-light" aria-label="Second navbar example">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img class="img-fluid" src="{{ asset('image/logo.png')}}" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About us</a>
+          </li>
+        </ul>
+        <form role="search">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+        </form>
+      </div>
+    </div>
+  </nav>
+
 
         <nav class="navbar navbar-expand-lg bg-light navbar-light m-4 sticky-top" id="navbar1">
           <div class="container-fluid">
@@ -33,7 +56,7 @@
               <div class="">
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0" nav-items>
                     <li class="nav-item">
-                      <a class="nav-link custom-text-dark" aria-current="page" href="#" class="roboto">Home</a>
+                      <a class="nav-link custom-text-dark" aria-current="page" href="#" class="roboto">Home3</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link custom-text-dark" href="#voteForYour" class="roboto">About Us</a>
