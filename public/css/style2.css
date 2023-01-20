@@ -10,9 +10,9 @@
 
 #p1-custom{
     font-style: normal;
-    font-weight: 80;
-    font-size: 70px;
-    line-height: 80px;
+    font-weight: 50;
+    font-size: 50px;
+    line-height: 30px;
     display: flex;
     align-items: center;
     letter-spacing: -0.0015em;
@@ -39,6 +39,34 @@
 
 #footerbg{
     background-image: url('../image/footerImage.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#footerBg1{
+    background-image: url('../image/holding voters card 1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#footerBg2{
+    background-image: url('../image/voters card1-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#footerBg3{
+    background-image: url('../image/vote2-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#SMI{
+    height: 40px;
+}
+
+#WCUI{
+    height: 200px;
 }
 
 #whyChooseUs{

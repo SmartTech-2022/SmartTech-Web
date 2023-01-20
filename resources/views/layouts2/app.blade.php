@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>OneVote</title>
     <link href="{{ asset('css/bootstrap.min.css')}}"
      rel="stylesheet">
     <link href="{{ asset('css/style2.css')}}"
@@ -35,9 +35,9 @@
                       <li class="nav-item">
                         <a class="nav-link custom-text-dark" aria-current="page" href="#" class="roboto">Home</a>
                       </li>
-                      <li class="nav-item">
+                      <!-- <li class="nav-item">
                         <a class="nav-link custom-text-dark" id="campaign" href="#" class="roboto">Campaign</a>
-                      </li>
+                      </li> -->
                       <li class="nav-item">
                         <a class="nav-link custom-text-dark" href="#voteForYour" class="roboto">About Us</a>
                       </li>
