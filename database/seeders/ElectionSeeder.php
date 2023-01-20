@@ -18,11 +18,13 @@ class ElectionSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('elections')->insert([
+       \App\Models\Election::factory(10)->create();
 
-            'name' => 'chuchu elections',
-            'active' => true
+        // DB::table('elections')->insert([
 
-        ]);
+        //     'name' => 'chuchu elections',
+        //     'active' => true
+
+        // ]);
     }
 }

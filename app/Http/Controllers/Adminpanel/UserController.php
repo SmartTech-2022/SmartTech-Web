@@ -4,12 +4,21 @@ namespace App\Http\Controllers\Adminpanel;
 
 use App\Models\User;
 use Illuminate\Support\Str;
+
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Support\Facades\Auth;
+
+ use App\Http\Controllers\Adminpanel\UserController;
+use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
+use App\Http\Controllers\Controller;
+use App\Mail\UserCreated;
+
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 
@@ -29,16 +38,25 @@ class UserController extends Controller
     public function store(Request $request) {
         // dd($request->all());
         $valid = $request->validate([
-            'name' => 'max:255|min:5',
-            'email' => 'min:5',
-            'phone number' => 'min:10',
-            'password' => 'min:5',
+            'name' => 'max:255|min:5|required|string',
+            'email' => 'min:5|email|unique:users,email',
+            'phone_number' => 'min:11|integer',
+            'password' => 'min:6',
 
         ]);
+
         $voter_id = 'SMT'.'/'.strtoupper(Str::random(3)).'/'.rand(10000,99999);
         User::create(array_merge($valid, ['voter_id'=>$voter_id, 'password' => bcrypt($valid['password'])]));
        session()->flash('message', 'Voter Created Successfully');
         return redirect()->route('home')->withInput($request->input());
+
+
+        $voter_id = 'SMT'.strtoupper(Str::random(3)).'/'.rand(10000,99999);
+        $user = User::create(array_merge($valid, ['voter_id'=>$voter_id, 'password' => bcrypt($valid['password'])]));
+        // dd($valid);
+        Mail::to($user)->send(new UserCreated($user, $valid));
+        return redirect()->back()->withInput($request->input())->with('message', 'Account Created');
+
 
 
 
