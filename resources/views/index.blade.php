@@ -101,7 +101,7 @@
     </div> -->
 
     <div class="row mx-4 my-5">
-        <div class="col-lg-6 col-md-6" id="voteForYour">
+        <div class="col" id="voteForYour">
             <p> OneVote is a secure online voting platform that makes it easy to run elections at a fraction of the usual cost. We're the leading provider of ranked choice elections, which help achieve more democratic outcomes by better representing the will of your voters.
             </p>
         </div>
