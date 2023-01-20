@@ -1,4 +1,5 @@
-<?php
+
+<!-- <?php
 
 namespace App\Http\Controllers\Api;
 
@@ -11,7 +12,7 @@ use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
-    //
+
     public function createUser(Request $request) {
 
         try {
