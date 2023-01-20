@@ -87,19 +87,6 @@
 
 
 
-
-    <!-- <div class="row mx-4 mt-3">
-        <div class="col">
-                <img class="img-fluid custom-height" src="{{ asset('image/registerToVote.png')}}" alt="" >        
-        </div>
-        <div class="col">
-                <img class="img-fluid custom-height" src="{{ asset('image/viewLive.png')}}" alt="" >
-        </div>
-        <div class="col">
-                <img class="img-fluid custom-height" src="{{ asset('image/forReg.png')}}" alt="" >
-        </div>
-    </div> -->
-
     <div class="row mx-4 my-5">
         <div class="col" id="voteForYour">
             <p> OneVote is a secure online voting platform that makes it easy to run elections at a fraction of the usual cost. We're the leading provider of ranked choice elections, which help achieve more democratic outcomes by better representing the will of your voters.
@@ -157,7 +144,7 @@
                  <div class="form-check m-3">
                    <input type="checkbox" class="form-check-input" id="checkbox">
                    <label class="form-check-label text-light" for="checkbox" class="roboto">
-                    Yes, I want to receive news and communications for about the Nigeria Elections and Others.
+                    Yes, I want to receive news and communications for about the Nigeria Elections and Others1.
                    </label>
                  </div>
                  <button type="submit" class="btn btn-primary mx-3 my-2" class="roboto">Submit</button>
