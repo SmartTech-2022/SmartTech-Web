@@ -1,72 +1,73 @@
 @extends('layouts.admin')
 
 @section('content')
-   <div class="container my-5 py-5">
-    @if (session()->has('message'))
+   {{-- <div class="container-fluid  py-3"> --}}
+    <div class="row">
+        @if (session()->has('message'))
     <div class="alert alert-success">
         {{ session()->get('message') }}
     </div>
     @endif
 
-    {{-- @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif --}}
-    <h5>   Please Create an Account  </h5>
 
-        <form method="POST" action="{{ route('user.store') }}" class="border py-3 px-3 rounded" enctype="multipart/form-data">
-            
+
+
+     <div class="col-md-6 offset-md-2">
+
+    <div class="card p-2 m-3 shadow-md">
+        <h6>  Register User </h6>
+        <form method="POST" action="{{ route('users.store') }}" class="border py-3 px-3 rounded" enctype="multipart/form-data">
+            @csrf
             <div class="mb-3">
                 @csrf
-                <input type="text" name="name" class="form-control  @error('slug') is-invalid @enderror" id="name" placeholder="name" value="">
+                <input type="text" name="name" class="form-control  @error('name') is-invalid @enderror" id="name" placeholder="Name" value="">
                 @error('name')
                     <small class="text-danger"> {{ $message }}</small>
                 @enderror
             </div>
             <hr>
             <div class="mb-3">
-                
-                <input type="text" name="email" class="form-control @error('email') is-invalid @enderror"  id="email" placeholder="email" value="">
+
+                <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"  id="email" placeholder="Email" value="">
                 @error('email')
                     <small class="text-danger"> {{ $message }}</small>
                 @enderror
             </div>
             <hr>
-            <div class="mb-3">
-                
-                <input class="form-control @error('phone number') is-invalid @enderror" name="phone number"  id="phone number"placeholder="phone number"> 
-                
+             <div class="mb-3">
+
+                <input  class="form-control @error('phone number') is-invalid @enderror" name="phone number"  id="phone number"placeholder="Phone number">
+
                 @error('phone number')
                     <small class="text-danger"> {{ $message }}</small>
                 @enderror
             </div>
-
-            {{-- <hr>
             <div class="mb-3">
-                
-                <input class="form-control @error('password') is-invalid @enderror" name="password"  id="password"placeholder="password"> 
-                
+
+                <input  type="password" class="form-control @error('password') is-invalid @enderror" name="password"  id="password"placeholder="Password">
+
                 @error('password')
                     <small class="text-danger"> {{ $message }}</small>
                 @enderror
-            </div> --}}
-            
-            {{-- <hr>
-            <div class="mb-3">
-                <label for="image" class="form-label">Add Image: </label><br>
-                <input type="file" name="fileToUpload" id="image">
-            </div> --}}
+            </div>
+
 
 
             <hr>
-            <button type="submit" class="btn btn-outline-info w-30 btn-lg">Submit</button><br><br>
+            <div class="mb-3">
+                <label for="image" class="form-label">Upload a Passport  </label><br>
+                <input type="file" name="fileToUpload" id="image">
+            </div>
+
+
+            <hr>
+            <button type="submit" class="btn btn-outline-success w-30 btn-lg">Register</button><br><br>
 
         </form>
     </div>
+   </div>
+   </div>
+
+
 @endsection
 
