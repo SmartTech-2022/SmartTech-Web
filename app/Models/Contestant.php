@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contestant extends Model
 {
-    protected $guarded = ['id'];
+    
     use HasFactory;
     protected $with = ['votes'];
     protected $guarded = ['id'];
