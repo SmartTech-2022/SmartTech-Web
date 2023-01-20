@@ -25,7 +25,8 @@ use App\Http\Controllers\{FrontController, UsersController, VoterController};
 
 
 // users route
-Route::get('/', [FrontController::class, 'index'])->name('home');
+Route::get('/', [FrontController::class, 'index']);
+
 Route::get('/create-user', [UserController::class, 'create']);
 Route::post('/create-user', [UserController::class, 'store'])->name('user.store');
 Route::get('/user/{id}', [UserController::class, 'show'])->name('user.show');
@@ -57,8 +58,6 @@ Route::post('/contestant', [ContestantController::class, 'store'])->name('contes
 Route::get('/contestant/{id}/edit',[ContestantController::class, 'edit'])->name('contestant.edit');
 Route::patch('/contestant/{id}',[ContestantController::class, 'update'])->name('contestant.update');
 Route::delete('/contestant/{id}',[ContestantController::class, 'destroy']);
-
-
 
 
 

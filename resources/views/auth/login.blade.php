@@ -14,7 +14,7 @@
 
         <div class="col-md-6 offset-md-3">
             <div class="card p-5 m-3 sm-shadow">
-                <form method="post" action="{{ route('login') }}" enctype="multipart/form-data">
+                <form method="post" action="{{ route('auth.login') }}" enctype="multipart/form-data">
                     @csrf
 
 
