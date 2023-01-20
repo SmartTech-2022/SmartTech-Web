@@ -24,7 +24,7 @@ class AuthController extends Controller
 
         // Attempt to authenticate the user
         $user = User::where('voter_id', $request->input('voter_id'))->first();
-        if($user){
+        if($user != null){
             if (!Hash::check($request->input('password'), $user->password)) {
                 return response()->json(['message' => 'Password is not correct'], 401);
             }
