@@ -74,13 +74,13 @@
         </div>
          
         <div class="row mx-4 mt-3">
-            <div class="col-lg-4 col-md-6 p-1 d-flex justify-content-center">
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
                 <img class="img-fluid" id="WCUI" src="{{ asset('image/group 82.png')}}" alt="" >            
             </div>
-            <div class="col-lg-4 col-md-6 p-1 d-flex justify-content-center">
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
                 <img class="img-fluid" id="WCUI" src="{{ asset('image/group 83.png')}}" alt="" >            
             </div>
-            <div class="col-lg-4 col-md-12 p-1 d-flex justify-content-center">
+            <div class="col-lg-4 col-md-12 d-flex justify-content-center">
                 <img class="img-fluid" id="WCUI" src="{{ asset('image/group 84.png')}}" alt="" >            
             </div>
         </div>
