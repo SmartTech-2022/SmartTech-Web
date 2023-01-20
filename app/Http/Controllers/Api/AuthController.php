@@ -33,4 +33,6 @@ class AuthController extends Controller
 
         return response()->json(["message" => "Login Successful", "user" => auth()->user(), 'token' => auth()->user()->createToken(config('app.key'))->plainTextToken,]);
     }
+
+
 }
