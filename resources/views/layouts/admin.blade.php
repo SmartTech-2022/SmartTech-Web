@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="{{ asset("assets/fonts/fontawesome-all.min.css") }}">
     <link rel="stylesheet" href="{{ asset("assets/fonts/font-awesome.min.css") }}">
     <link rel="stylesheet" href="{{ asset("assets/fonts/fontawesome5-overrides.min.css") }}">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 </head>
 
 <body id="page-top">
@@ -23,8 +27,11 @@
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
                     <li class="nav-item"><a class="nav-link active" href="auth.login"><i class="fas fa-user-circle"></i><span>Login</span></a></li>
+
                     <li class="nav-item"><a class="nav-link active" href="/"><i class="fas fa-user-circle"></i><span>Dashboard</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="auth.register"><i class="fas fa-user"></i><span>Register</span></a></li>
+
+                    <li class="nav-item"><a class="nav-link active" href="auth.register"><i class="fas fa-user"></i><span>Register</span></a></li>
+
                     <li class="nav-item"><a class="dropdown dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fas fa-user-circle"></i><span>Contestant</span>
                     </a>
@@ -35,6 +42,15 @@
                     </li>
 
                     <li class="nav-item"><a class="nav-link" href="contestant-create"><i class="fas fa-user-circle"></i><span> Election</span></a></li>
+
+                    <li class="nav-item"><a class="dropdown dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user-circle"></i><span>Election</span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="voters-create">Add Election</a></li>
+                      <li><a class="dropdown-item" href="#">View Election</a></li>
+                    </ul>
+                </li>
 
                     <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user-circle"></i><span>Votes</span></a></li>
                     <li class="nav-item"><a class="dropdown dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -55,7 +71,7 @@
             <div class="div">
                 <nav class="navbar navbar-expand-lg text-success">
                     <div class="container-fluid link-color">
-                        <a class="navbar-brand" href="#">Home</a>
+                        <a><h3>Dashboard<h3></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -64,10 +80,10 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav link-color me-auto mb-2 mb-lg-0">
                                 <li class="nav-item px-3">
-                                    <a class="nav-link  " aria-current="page" href="#">About</a>
+                                    <a class="nav-link  " aria-current="page" href="#"></a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="#">Contact us</a>
+                                    <a class="nav-link" href="#"></a>
                                 </li>
                             </ul>
                             <form class="d-flex" role="search">
@@ -82,17 +98,21 @@
             
              @yield('content')
              @yield('users')
-        <footer class="py-3 my-4">
-            <p class="text-center text-muted">© 2023 Voting System, Inc</p>
-        </footer>
-    </div>
+        </div>
 
-   
-   
+      
+            <footer style="margin-top: 150px">
+                <p class="text-center text-muted">© 2023 Voting System, Inc</p>
+            </footer>
+       
+        
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/chart.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </body>
 
 </html>
