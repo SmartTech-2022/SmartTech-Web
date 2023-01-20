@@ -20,48 +20,54 @@
 
 </head>
 <body>
-    <div class="container-fluid">
+  
+  
+  <nav class="navbar navbar-expand-lg bg-light navbar-light m-4 sticky-top" id="navbar1">
+          <div class="container-fluid">
 
-        <nav class="navbar navbar-expand-lg bg-light navbar-light m-4 sticky-top" id="navbar1">            
-              <!-- <div id="brand-container" > -->
-              <a class="navbar-brand" href="#"><img class="img-fluid" src="{{ asset('image/logo.png')}}" alt=""></a>
-              <!-- </div> -->
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <div class="">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" nav-items>
-                      <li class="nav-item">
-                        <a class="nav-link custom-text-dark" aria-current="page" href="#" class="roboto">Home</a>
-                      </li>
-                      <!-- <li class="nav-item">
-                        <a class="nav-link custom-text-dark" id="campaign" href="#" class="roboto">Campaign</a>
-                      </li> -->
-                      <li class="nav-item">
-                        <a class="nav-link custom-text-dark" href="#voteForYour" class="roboto">About Us</a>
-                      </li>
-                      <li class="nav-item btn btn-sm mx-2">
-                        <form role="search">
-                          <div class="input-group">
-                              <input type="text" class="form-control bg-light small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                              <div class="input-group-append">
-                                  <button class="btn btn-success" type="button">
-                                    Search
-                                  </button>
+            <!-- <div id="brand-container" > -->
+            <a class="navbar-brand" href="#"><img class="img-fluid" src="{{ asset('image/logo.png')}}" alt=""></a>
+            <!-- </div> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+              <div class="">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0" nav-items>
+                    <li class="nav-item">
+                      <a class="nav-link custom-text-dark" aria-current="page" href="#" class="roboto">Home</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                      <a class="nav-link custom-text-dark" id="campaign" href="#" class="roboto">Campaign</a>
+                    </li> -->
+                    <li class="nav-item">
+                      <a class="nav-link custom-text-dark" href="#voteForYour" class="roboto">About Us</a>
+                    </li>
+                    <li class="nav-item btn btn-sm mx-2">
+                      <form role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-success" type="button">
+                                  Search
+                                </button>
                               </div>
-                          </div>
-                        </form>
-                      </li>
-                    </ul>
-                </div>
-              </div>
-            
-        </nav><br>
-        
-        @yield('content')
+                            </div>
+                          </form>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                </div>            
+                
+              </nav><br>
 
-    </div>
+              <div class="container-fluid">
+              
+                 @yield('content')
+
+              </div>
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
 
 </body>
