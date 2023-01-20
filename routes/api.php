@@ -18,9 +18,8 @@ use App\Http\Controllers\Api\ContestantController;
 |
 */
 // Auth
-
 // Route::post('login', [AuthController::class, 'login']);
-// Route::post('register', [AuthController::class, 'register']);79+
+// Route::post('register', [AuthController::class, 'register']);
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
@@ -30,6 +29,7 @@ Route::post('register', [AuthController::class, 'register']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
 
 
 // Route::middleware(['auth:sanctum'])->group(function () {
@@ -57,6 +57,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     Route::get('contestants/{id}', 'ContestantController@show')->name('show');
 //     });
 // });
+
 
 
 
