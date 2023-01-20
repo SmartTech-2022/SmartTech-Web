@@ -52,7 +52,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('contestants', [ElectionController::class, 'contestants']);
     Route::post('store', [VotesController::class, 'store']);
     Route::name('contestants.')->group(function () {
-    Route::get('contestants/{id}', 'ContestantController@show')->name('show');
+    Route::get('contestants/{id}', [ContestantController::class, 'show'])->name('show');
     });
 });
 

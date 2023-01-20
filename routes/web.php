@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
-use App\Http\Controllers\Adminpanel;
+
 use App\Http\Controllers\Adminpanel\FrontController;
 use App\Http\Controllers\Adminpanel\UserController;
 use App\Http\Controllers\Adminpanel\VoterController;
@@ -93,6 +93,6 @@ Route::delete('/contestant/{id}',[ContestantController::class, 'destroy']);
 
 
 
-Route::get('about', [App\Http\Controllers\UsersController::class, 'about']);
-Route::get('contact', [App\Http\Controllers\UsersController::class, 'contact']);
+// Route::get('about', [App\Http\Controllers\UsersController::class, 'about']);
+// Route::get('contact', [App\Http\Controllers\UsersController::class, 'contact']);
 
