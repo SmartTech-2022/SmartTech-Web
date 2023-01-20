@@ -26,13 +26,13 @@ use App\Http\Controllers\Api\ContestantController;
 // });
 Route::post('login', [AuthController::class, 'loginUser']);
 // Route::post('login', [AuthController::class, 'login']);
-Route::post('register', [AuthController::class, 'register']);
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::post('register', [AuthController::class, 'register']);
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
 
-// Route::middleware(['auth:sanctum'])->group(function () {
+Route::middleware('auth:sanctum')->group(function () {
 
 
     // Election
@@ -45,18 +45,16 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     Route::name('contestants.')->group(function () {
         Route::get('contestants/{id}', [ContestantController::class, 'show'])->name('show');
     });
-// });
 
-//     // Election
-//     Route::get('elections', [ElectionController::class, 'elections']);
+    Route::get('elections', [ElectionController::class, 'elections']);
 
 //     // contestant
-//     Route::get('contestants', [ElectionController::class, 'contestants']);
-//     Route::post('store', [VotesController::class, 'store']);
-//     Route::name('contestants.')->group(function () {
-//     Route::get('contestants/{id}', 'ContestantController@show')->name('show');
-//     });
-// });
+    Route::get('contestants', [ElectionController::class, 'contestants']);
+    Route::post('store', [VotesController::class, 'store']);
+    Route::name('contestants.')->group(function () {
+    Route::get('contestants/{id}', 'ContestantController@show')->name('show');
+    });
+});
 
 
 
