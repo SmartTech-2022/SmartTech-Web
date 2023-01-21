@@ -191,13 +191,13 @@
     <!-- Section: Social media -->
     <section class="mb-4">
       <!-- Facebook -->
-      <a href="https://www.facebook.com"><img class="img-fluid px-3" id="SMI" src="{{ asset('image/facebook.png')}}" alt=""></a>
+      <a href="https://www.facebook.com"><img class="img-fluid px-3" style="height:20px" src="{{ asset('image/facebook.png')}}" alt=""></a>
 
       <!-- Twitter -->
-      <a href="https://twitter.com"><img class="img-fluid px-3" id="SMI" src="{{ asset('image/twitter.png')}}" alt=""></a>
+      <a href="https://twitter.com"><img class="img-fluid px-3" style="height:20px" src="{{ asset('image/twitter.png')}}" alt=""></a>
 
       <!-- Instagram -->
-      <a href="https://www.instagram.com"><img class="img-fluid px-3" id="SMI" src="{{ asset('image/instagram.png')}}" alt=""></a>
+      <a href="https://www.instagram.com"><img class="img-fluid px-3" style="height:20px" src="{{ asset('image/instagram.png')}}" alt=""></a>
 
     </section>
     <!-- Section: Social media -->

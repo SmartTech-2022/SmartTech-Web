@@ -9,7 +9,7 @@
     <link href="{{ asset('css/bootstrap.min.css')}}"
      rel="stylesheet">
     <link href="{{ asset('css/style2.css')}}"
-     rel="stylesheet">
+     rel="stylesheet" type="text/css">
     <link href="{{ asset('js/bootstrap.min.js')}}"
      rel="stylesheet">
     <link href="{{ asset('scripts.js')}}"
