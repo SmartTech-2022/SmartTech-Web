@@ -4,15 +4,16 @@
 
     <div class="row mx-4 my-5">
         <div class="col-lg-5 col-md-5 col-sm-12 px-5">
-            <p id="p1-custom" class="roboto">Your Vote, Your Right</p>
-            <p id="p2-custom" class="roboto" id="futureVoting">Future voting systems, paving the path for worldwide expansion, precise analysis, and more top-notch services.
-            </p>
-            <div class="d-flex justify-content-center">
-                <a href="#download">
-                    <button class="btn btn-success btn-lg px-5" type="submit">Getting started</button>
-                </a>
+            <div class="mb-5">
+                <h1 id="h1-custom" class="roboto">Your Vote, Your Right</h1>
+                <p id="p2-custom" class="roboto" id="futureVoting">Future voting systems, paving the path for worldwide expansion, precise analysis, and more top-notch services.
+                </p>
+                <div class="my-5 d-flex justify-content-center">
+                    <a href="#download">
+                        <button class="btn btn-success btn-lg px-5" type="submit">Getting started</button>
+                    </a>
+                </div>
             </div>
-
         </div>
         <div class="col-lg-5 col-md-5 col-sm-12 offset-lg-2 offset-md-2">
             <div class="row">
@@ -21,19 +22,19 @@
                 </div>
             </div>
             <div class="row d-flex justify-content-around">
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                     <img class="img-fluid" src="{{ asset('image/undraw_voting_nvu7.png')}}" alt="">
                 </div>
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                     <img class="img-fluid" src="{{ asset('image/phone.png')}}" alt="">
                 </div>
             </div>
 
             <div class="row d-flex justify-content-center">
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                     <img class="img-fluid" src="{{ asset('image/lady standing.png')}}" alt="">
                 </div>
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                     <img class="img-fluid" src="{{ asset('image/phone.png')}}" alt="">
                 </div>
             </div>
