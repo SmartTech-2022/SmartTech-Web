@@ -6,7 +6,7 @@
         <div class="col-lg-5 col-md-5 col-sm-12">
             <div class="mb-5">
                 <h1 id="h1-custom" class="roboto">Your Vote, Your Right</h1>
-                <p id="p2-custom" class="roboto" id="futureVoting">Future voting systems, paving the path for worldwide expansion, precise analysis, and more top-notch services.
+                <p id="p2-custom" class="roboto">Future voting systems, paving the path for worldwide expansion, precise analysis, and more top-notch services.
                 </p>
                 <div class="my-5 d-flex justify-content-center">
                     <a href="#download">
@@ -45,14 +45,14 @@
 
 
 
-    <div class="row mx-4 my-5">
+    <div class="row mx-4 my-5" id="download">
         <div class="custom-text3">
             <p> Vote for your favourite Candidate or political Party, If you’re a registered voter kindly download our app in Google Play store or Apple Appstore, simply log in and cast your vote.
             </p>
         </div>
     </div>
 
-    <div class="row mx-4 mt-3" id="download">
+    <div class="row mx-4 mt-3">
         <div class="col">
             <a href="http://play.google.com">
                 <img class="img-fluid custom-height" src="{{ asset('image/playstoreButton.png')}}" alt="" >
