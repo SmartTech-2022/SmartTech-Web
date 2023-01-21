@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="row mx-4 my-5">
-        <div class="col-lg-5 col-md-5 col-sm-12 px-5">
+        <div class="col-lg-5 col-md-5 col-sm-12">
             <div class="mb-5">
                 <h1 id="h1-custom" class="roboto">Your Vote, Your Right</h1>
                 <p id="p2-custom" class="roboto" id="futureVoting">Future voting systems, paving the path for worldwide expansion, precise analysis, and more top-notch services.
@@ -35,7 +35,7 @@
                     <img class="img-fluid" src="{{ asset('image/lady standing.png')}}" alt="">
                 </div>
                 <div class="col-lg-4 col-md-4">
-                    <img class="img-fluid" src="{{ asset('image/phone.png')}}" alt="">
+                    <img class="img-fluid" src="{{ asset('image/undraw_selecting_team_re_ndkb.png')}}" alt="">
                 </div>
             </div>
     
@@ -46,7 +46,7 @@
 
 
     <div class="row mx-4 my-5">
-        <div class="col-lg-6 col-md-6" id="voteForYour">
+        <div class="custom-text3">
             <p> Vote for your favourite Candidate or political Party, If you’re a registered voter kindly download our app in Google Play store or Apple Appstore, simply log in and cast your vote.
             </p>
         </div>
@@ -54,13 +54,13 @@
 
     <div class="row mx-4 mt-3" id="download">
         <div class="col">
-            <a href="">
+            <a href="http://play.google.com">
                 <img class="img-fluid custom-height" src="{{ asset('image/playstoreButton.png')}}" alt="" >
             </a>
             
         </div>
         <div class="col d-flex justify-content-end">
-            <a href="">
+            <a href="https://www.apple.com ">
                 <img class="img-fluid custom-height" src="{{ asset('image/appstoreButton.png')}}" alt="" >
             </a>     
         </div>
@@ -88,8 +88,8 @@
 
 
 
-    <div class="row mx-4 my-5">
-        <div class="col" id="voteForYour">
+    <div class="row mx-4 my-5 custom-text3" id="AboutUs">
+        <div class="col">
             <p> OneVote is a secure online voting platform that makes it easy to run elections at a fraction of the usual cost. We're the leading provider of ranked choice elections, which help achieve more democratic outcomes by better representing the will of your voters.
             </p>
         </div>
