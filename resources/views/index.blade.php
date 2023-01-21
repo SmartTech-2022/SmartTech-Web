@@ -4,11 +4,15 @@
 
     <div class="row mx-4 my-5">
         <div class="col-lg-5 col-md-5 col-sm-12 px-5">
-            <p id="p1-custom" class="roboto">Your Vote, Your Right</p>
-            <p id="p2-custom" class="roboto" id="futureVoting">Future voting systems, paving the path for worldwide expansion, precise analysis, and more top-notch services.
-            </p>
+            <div class="container">
+                <p id="p1-custom" class="roboto "><span class="typed-text">
+                    </span><span class="cursor"> </span></p>
+            </div>
+
+            <h6 id="p2-custom" class="roboto" id="futureVoting">Future voting systems, paving the path for worldwide expansion, precise analysis, and more top-notch services.
+            </h6>
             <div class="d-flex justify-content-center">
-                <button class="btn btn-success btn-lg px-5" type="submit">Getting started</button>
+                <button class="btn btn-success btn-lg px-5" type="submit">Get Started</button>
             </div>
 
         </div>
@@ -35,25 +39,25 @@
                     <img class="img-fluid" src="{{ asset('image/phone.png')}}" alt="">
                 </div>
             </div>
-    
+
             </div>
         </div><br>
-        
+
         <div class="row mt-3">
             <div class="col d-flex justify-content-center">
                 <div id="whyChooseUs" class="roboto">Why Choose Us</div>
             </div>
         </div>
-         
+
         <div class="row mx-4 mt-3">
             <div class="col-lg-4 col-md-6 p-1">
-                <img class="img-fluid" src="{{ asset('image/group 82.png')}}" alt="" >            
+                <img class="img-fluid" src="{{ asset('image/group 82.png')}}" alt="" >
             </div>
             <div class="col-lg-4 col-md-6 p-1">
-                <img class="img-fluid" src="{{ asset('image/group 83.png')}}" alt="" >            
+                <img class="img-fluid" src="{{ asset('image/group 83.png')}}" alt="" >
             </div>
             <div class="col-lg-4 col-md-12 p-1">
-                <img class="img-fluid" src="{{ asset('image/group 84.png')}}" alt="" >            
+                <img class="img-fluid" src="{{ asset('image/group 84.png')}}" alt="" >
             </div>
         </div>
 
@@ -72,19 +76,19 @@
             <a href="">
                 <img class="img-fluid custom-height" src="{{ asset('image/playstoreButton.png')}}" alt="" >
             </a>
-            
+
         </div>
         <div class="col d-flex justify-content-end">
             <a href="">
                 <img class="img-fluid custom-height" src="{{ asset('image/appstoreButton.png')}}" alt="" >
-            </a>     
+            </a>
         </div>
     </div><br>
 
 
     <div class="row mx-4 mt-3">
         <div class="col">
-                <img class="img-fluid custom-height" src="{{ asset('image/registerToVote.png')}}" alt="" >        
+                <img class="img-fluid custom-height" src="{{ asset('image/registerToVote.png')}}" alt="" >
         </div>
         <div class="col">
                 <img class="img-fluid custom-height" src="{{ asset('image/viewLive.png')}}" alt="" >
@@ -96,8 +100,8 @@
 
     <div class="row mx-4 my-5">
         <div class="col-lg-6 col-md-6" id="voteForYour">
-            <p> OneVote is a secure online voting platform that makes it easy to run elections at a fraction of the usual cost. We're the leading provider of ranked choice elections, which help achieve more democratic outcomes by better representing the will of your voters.
-            </p>
+            <h5> OneVote is a secure online voting platform that makes it easy to run elections at a fraction of the usual cost. We're the leading provider of ranked choice elections, which help achieve more democratic outcomes by better representing the will of your voters.
+            </h5>
         </div>
     </div>
 
@@ -119,8 +123,8 @@
                 <div class="m-3" class="roboto">
                     SiteMap
                     Career Opportunities
-                    Site Maintenance Schedules 
-                    Language Access Complaint Form 
+                    Site Maintenance Schedules
+                    Language Access Complaint Form
                     Guidelines For Access to Public Record
                 </div>
             </div>
@@ -146,13 +150,13 @@
                    </label>
                  </div>
                  <button type="submit" class="btn btn-primary mx-3 my-2" class="roboto">Submit</button>
-             </form>            
+             </form>
             </div>
         </div>
         <div class="row">
             <div class="col d-flex justify-content-center">
                 <p class="text-light" class="roboto">
-                    Copyright 2022 ONEVOTE Ministry Of science And Technology     Delta State Innovation Hub, DBS 
+                    Copyright 2022 ONEVOTE Ministry Of science And Technology     Delta State Innovation Hub, DBS
                     Junction, Asaba, Delta State 223323      234-77608879
                 </p>
             </div>
@@ -160,6 +164,6 @@
     </footer>
 
 </section>
-                        
+
 
 @endsection

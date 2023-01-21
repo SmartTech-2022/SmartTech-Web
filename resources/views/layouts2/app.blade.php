@@ -14,6 +14,7 @@
      rel="stylesheet">
     <link href="{{ asset('scripts.js')}}"
      rel="stylesheet">
+     <link rel="stylesheet" href="{{'style.css'}}">
 
      <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
@@ -22,7 +23,7 @@
 <body>
     <div class="container-fluid">
 
-        <nav class="navbar navbar-expand-lg bg-light navbar-light m-4 sticky-top" id="navbar1">            
+        <nav class="navbar navbar-expand-lg bg-light navbar-light m-4 sticky-top" id="navbar1">
               <div id="brand-container" >
               <a class="navbar-brand" href="#"><img src="{{ asset('image/logo.png')}}" alt=""></a>
               </div>
@@ -56,13 +57,14 @@
                     </ul>
                 </div>
               </div>
-            
+
         </nav><br>
-        
+
         @yield('content')
 
     </div>
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('typed.js')}}"></script>
 
 </body>
 </html>
