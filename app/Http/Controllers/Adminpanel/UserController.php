@@ -104,7 +104,7 @@ public function show(){
             return redirect()->back()->withInput($request->input())->with('message', 'Login Details Does not Exist');
         }
         Auth::login($user);
-        return redirect()->route('user.home')->withInput($request->input())->with('message', 'Login Successful');
+        return redirect()->route('home')->withInput($request->input())->with('message', 'Login Successful');
 
     }
 
