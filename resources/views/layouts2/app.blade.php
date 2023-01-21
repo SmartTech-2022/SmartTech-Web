@@ -35,7 +35,7 @@
                       <a class="nav-link custom-text-dark" aria-current="page" href="#" class="roboto">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link custom-text-dark" href="#voteForYour" class="roboto">About Us</a>
+                      <a class="nav-link custom-text-dark" href="#AboutUs" class="roboto">About Us</a>
                     </li>
                     <li class="nav-item btn btn-sm mx-2">
                       <form role="search">
