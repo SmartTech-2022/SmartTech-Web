@@ -3,14 +3,16 @@
 @section('content')
 
     <div class="row mx-4 my-5">
-        <div class="col-lg-5 col-md-5 col-sm-12">
-            <div class="mb-5">
-                <h1 id="h1-custom" class="roboto">Your Vote, Your Right</h1>
-                <p id="p2-custom" class="roboto">Future voting systems, paving the path for worldwide expansion, precise analysis, and more top-notch services.
-                </p>
-                <div class="my-5 d-flex justify-content-center">
+        <div class="col-lg-5 col-md-5 col-sm-12 px-5">
+            <div class="container">
+                <p id="p1-custom" class="roboto "><span class="typed-text">
+                    </span><span class="cursor"> </span></p>
+            </div>
+            <h6 id="p2-custom" class="roboto" id="futureVoting">Future voting systems, paving the path for worldwide expansion, precise analysis, and more top-notch services.
+            </h6>
+                <div class="my-5 d-flex justify-content-left">
                     <a href="#download">
-                        <button class="btn btn-success btn-lg px-5" type="submit">Getting started</button>
+                        <button class="btn btn-success btn-lg px-5" type="submit">Get Started</button>
                     </a>
                 </div>
             </div>
