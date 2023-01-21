@@ -18,11 +18,27 @@
      <form method="POST" action="{{ route('contestant.store') }}" class="border py-3 px-3 rounded" enctype="multipart/form-data">
         @csrf
          <div class="mb-3">
-             <input type="text" name="name" class="form-control  @error('contestant_name') is-invalid @enderror" id="contestant_name" placeholder="Contestant_name" value="">
-             @error('contestant_name')
+             <input type="text" name="name" class="form-control  @error('name') is-invalid @enderror" id="name" placeholder="Contestant Name" value="">
+             @error('name')
                  <small class="text-danger"> {{ $message }}</small>
              @enderror
          </div>
+         <hr>
+         <div class="mb-3">
+            <input type="text" name="party" class="form-control  @error('party') is-invalid @enderror" id="party" placeholder="Contestant Party" value="">
+            @error('party')
+                <small class="text-danger"> {{ $message }}</small>
+            @enderror
+        </div>
+         <hr>
+         <div class="mb-3">
+            <label for="gender" class="form-label">Gender</label>
+            <select name="gender" id="" class="form-control">
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
          <hr>
          <div class="mb-3">
 
@@ -37,7 +53,7 @@
 
             <select name="election_id" id="" class="form-control">
                 <option value="">Select  Election</option>
-                @foreach ($elections as $key => $election)
+                @foreach ($elections as  $election)
                 <option value="{{$election->id}}">{{$election->name}}</option>
                 @endforeach
                 {{-- <option value="">{{['election' => $election]}}</option> --}}

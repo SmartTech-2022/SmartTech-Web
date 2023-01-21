@@ -22,10 +22,10 @@ class ElectionController extends Controller
 
          public function index(){
              Paginator::useBootstrap();
-             $elections = Election::paginate(2);
-             return view('elections.index', ['elections' => $elections]);
-
-         }
+             $elections = Election::paginate();
+            //  dd($elections);
+                  return view('elections.index', ['elections' => $elections]);
+          }
 
          public function create(){
              return view('elections.create');
@@ -34,16 +34,18 @@ class ElectionController extends Controller
 
          public function store(Request $request){
              $valid = $request->validate([
-                 'name' => 'required',
+                 'name' => 'required|unique:elections,name',
                  'active' => 'required'
              ]);
              Election::create($valid);
-             return redirect()->route('home')->withInput($request->input())->with('message', 'Election Created Successfully');
+             return redirect()->route('election.home')->with('message', 'Election Created Successfully');
             }
 
-         public function show($name){
-             $election = Election::where('name', $name)->first();
-             return view('election', ['election' => $election]);
+         public function show($id){
+            $election = Election::where('id', $id)->with('contestant')->first();
+            // dd($election);
+            //  $election = Election::where('name', $name)->first();
+             return view('elections.election', ['elections' => $election]);
          }
 
          public function edit($id){
@@ -62,12 +64,12 @@ class ElectionController extends Controller
                  'name' => $request->name,
                  'active' => $request->active,
              ]);
-             return redirect()->back()->with('message', 'Election Updated');
+             return redirect()->route('election.home')->with('message', 'Election Updated Successfully');
          }
          public function destroy($id){
              $election = Election::find($id);
              $election->delete();
-             return redirect()->back()->with('messaged', 'Election deleted');
+             return redirect()->route('election.home')->with('messaged', 'Election deleted');
 
          }
      }

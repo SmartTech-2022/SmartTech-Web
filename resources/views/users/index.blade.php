@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 
@@ -8,11 +8,12 @@
                 <div class="card">
                     <div class="card-header">
                         <i class="fa fa-align-justify"></i>
-                        <a class="btn btn-success btn-spinner btn-sm pull-right m-b-0" href="{{ }}" role="button"><i class="fa fa-plus"></i></a>
+                        <a class="btn btn-success btn-spinner btn-sm pull-right m-b-0" href="" role="button"><i class="fa fa-plus"></i></a>
                     </div>
                     <div class="card-body" >
                         <span>
-                            <button type="button" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                            <button type="button" class="btn btn-success"><i class="fa fa-search"></i></button>
+
                         </span>
 
                         <div class="col-sm-auto pull-right form-group ">
@@ -25,28 +26,28 @@
                         </div>
 
 
-                        <table class="table table-hover table-listing">
+                        <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th is='sortable' :column="'id'"></th>
-                                    <th is='sortable' :column="'Name'"></th>
-                                    <th is='sortable' :column="'Email'"></th>
-                                    <th is='sortable' :column="'Voter_id'"></th>
-                                    <th is='sortable' :column="'Phone number'"></th>
+
+                                    <th> Name</th>
+                                    <th> Email</th>
+                                    <th> Voter_id</th>
 
 
-                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($users as $user)
+
                                 <tr>
-                                    <td>{{ users.id }}</td>
-                                    <td>{{ users.Name }}</td>
-                                    <td>{{ users.Email }}</td>
-                                    <td>{{ users.Voter_id }}</td>
-                                    <td>{{ users.Phone_number }}</td>
+                                    <td>{{$user->name}}</td>
+                                    <td>{{$user->email}}</td>
+                                    <td>{{$user->voter_id}}</td>
 
                                 </tr>
+                                    @endforeach
+
                             </tbody>
                         </table>
 
@@ -55,7 +56,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+
 
 
 @endsection
