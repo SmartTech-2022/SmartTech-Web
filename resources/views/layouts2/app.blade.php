@@ -9,6 +9,8 @@
     <link href="{{ asset('css/bootstrap.min.css')}}"
      rel="stylesheet">
     <link href="{{ asset('css/style2.css')}}"
+    <link href="{{ asset('css/styles.css')}}"
+
      rel="stylesheet">
     <link href="{{ asset('js/bootstrap.min.js')}}"
      rel="stylesheet">
@@ -64,6 +66,7 @@
 
     </div>
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('js/script.js')}}"></script>
     <script src="{{ asset('typed.js')}}"></script>
 
 </body>

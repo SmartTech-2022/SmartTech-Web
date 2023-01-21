@@ -32,7 +32,7 @@
                     class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand mx-0"
                     href="#">
                     <div class="sidebar-brand-text mx-0 ">
-                        <img src="{{ asset('image/logo.jpg') }}" width="200px" alternative="logo" />
+                        <img src="{{ asset('image/logo.png') }}" width="200px" alternative="logo" />
                     </div>
                 </a>
                 <hr class="sidebar-divider my-0">
