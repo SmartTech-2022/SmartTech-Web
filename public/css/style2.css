@@ -8,22 +8,22 @@
     border: 1px solid blue;
 }
 
-#p1-custom{
+#h1-custom{
     font-style: normal;
-    font-weight: 80;
-    font-size: 70px;
-    line-height: 80px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.0015em;
+    /* font-weight: 50; */
+    font-size: 42px;
+    /* line-height: 50px; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* letter-spacing: -0.0015em; */
     color: #001403;
 }
 
 #p2-custom{
     font-style: normal;
-    font-weight: 40;
-    font-size: 31px;
-    line-height: 40px;
+    /* font-weight: 40; */
+    font-size: 27px;
+    /* line-height: 40px; */
     color: #000000;
 }
 
@@ -39,6 +39,34 @@
 
 #footerbg{
     background-image: url('../image/footerImage.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#footerBg1{
+    background-image: url('../image/holding voters card 1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#footerBg2{
+    background-image: url('../image/voters card1-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#footerBg3{
+    background-image: url('../image/vote2-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* #SMI{
+    height: 20px;
+} */
+
+#WCUI{
+    height: 200px;
 }
 
 #whyChooseUs{
@@ -59,7 +87,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-#voteForYour{
+.custom-text3{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;

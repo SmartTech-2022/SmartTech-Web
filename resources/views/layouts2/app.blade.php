@@ -34,7 +34,7 @@
                 <div class="">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0" nav-items>
                       <li class="nav-item">
-                        <a class="nav-link custom-text-dark" aria-current="page" href="#" class="roboto">Home</a>
+                        <a class="nav-link custom-text-success" aria-current="page" href="#" class="roboto">Home</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link custom-text-dark" id="campaign" href="#" class="roboto">Campaign</a>
