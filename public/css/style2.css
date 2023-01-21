@@ -8,22 +8,22 @@
     border: 1px solid blue;
 }
 
-#p1-custom{
+#h1-custom{
     font-style: normal;
-    font-weight: 50;
-    font-size: 50px;
-    line-height: 50px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.0015em;
+    /* font-weight: 50; */
+    font-size: 42px;
+    /* line-height: 50px; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* letter-spacing: -0.0015em; */
     color: #001403;
 }
 
 #p2-custom{
     font-style: normal;
-    font-weight: 40;
-    font-size: 31px;
-    line-height: 40px;
+    /* font-weight: 40; */
+    font-size: 27px;
+    /* line-height: 40px; */
     color: #000000;
 }
 

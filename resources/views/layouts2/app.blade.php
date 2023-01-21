@@ -32,7 +32,7 @@
               <div class="">
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0" nav-items>
                     <li class="nav-item">
-                      <a class="nav-link custom-text-dark" aria-current="page" href="#" class="roboto">Home4</a>
+                      <a class="nav-link custom-text-dark" aria-current="page" href="#" class="roboto">Home</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link custom-text-dark" href="#voteForYour" class="roboto">About Us</a>
