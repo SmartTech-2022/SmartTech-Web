@@ -46,7 +46,7 @@
 
 
     <div class="row mx-4 my-5" id="download">
-        <div class="custom-text3">
+        <div style="font-family: 'Roboto'; font-style: normal; font-weight: 400; font-size: 23px; line-height: 162.69%; text-align: justify; color: #000000;">
             <p> Vote for your favourite Candidate or political Party, If you’re a registered voter kindly download our app in Google Play store or Apple Appstore, simply log in and cast your vote.
             </p>
         </div>
@@ -88,7 +88,7 @@
 
 
 
-    <div class="row mx-4 my-5 custom-text3" id="AboutUs">
+    <div class="row mx-4 my-5" id="AboutUs" style="font-family: 'Roboto'; font-style: normal; font-weight: 400; font-size: 23px; line-height: 162.69%; text-align: justify; color: #000000;">
         <div class="col">
             <h1>About Us</h1>
             <p> OneVote is a secure online voting platform that makes it easy to run elections at a fraction of the usual cost. We're the leading provider of ranked choice elections, which help achieve more democratic outcomes by better representing the will of your voters.
