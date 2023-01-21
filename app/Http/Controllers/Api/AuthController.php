@@ -24,8 +24,11 @@ class AuthController extends Controller
 
         // Attempt to authenticate the user
         $user = User::where('voter_id', $request->input('voter_id'))->first();
-
-        if (!Hash::check($request->input('password'), $user->password)) {
+        if($user != null){
+            if (!Hash::check($request->input('password'), $user->password)) {
+                return response()->json(['message' => 'Password is not correct'], 401);
+            }
+        }else{
             return response()->json(['message' => 'Voter id does not exist'], 401);
         }
 
@@ -33,4 +36,6 @@ class AuthController extends Controller
 
         return response()->json(["message" => "Login Successful", "user" => auth()->user(), 'token' => auth()->user()->createToken(config('app.key'))->plainTextToken,]);
     }
+
+
 }
