@@ -17,24 +17,24 @@
         </div>
         <div class="col-lg-5 col-md-5 col-sm-12 offset-lg-2 offset-md-2">
             <div class="row">
-                <div class="col d-flex justify-content-center">
+                <div class="col d-flex justify-content-lg-center d-flex justify-content-md-center">
                     <img class="img-fluid" src="{{ asset('image/laptop.png')}}" alt="">
                 </div>
             </div>
-            <div class="row d-flex justify-content-around">
-                <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="row d-flex justify-content-lg-around d-flex justify-content-md-around">
+                <div class="col-lg-4 col-md-4">
                     <img class="img-fluid" src="{{ asset('image/undraw_voting_nvu7.png')}}" alt="">
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="col-lg-4 col-md-4">
                     <img class="img-fluid" src="{{ asset('image/phone.png')}}" alt="">
                 </div>
             </div>
 
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="row d-flex justify-content-lg-center d-flex justify-content-md-center">
+                <div class="col-lg-4 col-md-4">
                     <img class="img-fluid" src="{{ asset('image/lady standing.png')}}" alt="">
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="col-lg-4 col-md-4">
                     <img class="img-fluid" src="{{ asset('image/phone.png')}}" alt="">
                 </div>
             </div>
