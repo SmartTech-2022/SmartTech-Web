@@ -43,12 +43,13 @@ Route::prefix('admin')->group(function () {
 
     Route::middleware('auth')->group(function () {
         Route::get('/', [FrontController::class, 'adminindex'])->name('home');
+        Route::get('/users', [UserController::class, 'index'])->name('user.home');
         Route::get('users/create', [UserController::class, 'create'])->name('users.create');
         Route::post('users/store', [UserController::class, 'store'])->name('users.store');
         Route::get('/user}', [UserController::class, 'show'])->name('user.show');
         // elections
-        Route::get('/election', [ElectionController::class, 'index'])->name('election.home');
-        Route::get('/election', [ElectionController::class, 'show'])->name('election.show');
+        Route::get('/elections', [ElectionController::class, 'index'])->name('election.home');
+        Route::get('/election/{id}', [ElectionController::class, 'show'])->name('election.show');
         Route::get('election-create', [ElectionController::class, 'create'])->name('elections.create');
         Route::post('election-create', [ElectionController::class, 'store'])->name('election.store');
         Route::get('election/edit/{id}', [ElectionController::class, 'edit'])->name('elections.edit');
@@ -56,6 +57,7 @@ Route::prefix('admin')->group(function () {
         Route::get('election/delete/{id}', [ElectionController::class, 'destroy'])->name('election.destroy');
 
         // contestants route
+        // Route::get('/contestants', [ContestantController::class, 'index'])->name('contestant.home');
         Route::get('/contestant-create', [ContestantController::class, 'create'])->name('contestant.create');
         Route::post('/contestant', [ContestantController::class, 'store'])->name('contestant.store');
         Route::get('/contestant', [ContestantController::class, 'show'])->name('contestant.show');
