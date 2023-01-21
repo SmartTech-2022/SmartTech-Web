@@ -76,13 +76,13 @@
          
         <div class="row mx-4 mt-3">
             <div class="col-lg-4 col-md-6 d-flex justify-content-center">
-                <img class="img-fluid" id="WCUI" src="{{ asset('image/Group 82.png')}}" alt="" >            
+                <img class="img-fluid p-3" id="WCUI" src="{{ asset('image/Group 82.png')}}" alt="" >            
             </div>
             <div class="col-lg-4 col-md-6 d-flex justify-content-center">
-                <img class="img-fluid" id="WCUI" src="{{ asset('image/Group 83.png')}}" alt="" >            
+                <img class="img-fluid p-3" id="WCUI" src="{{ asset('image/Group 83.png')}}" alt="" >            
             </div>
             <div class="col-lg-4 col-md-12 d-flex justify-content-center">
-                <img class="img-fluid" id="WCUI" src="{{ asset('image/Group 84.png')}}" alt="" >            
+                <img class="img-fluid p-3" id="WCUI" src="{{ asset('image/Group 84.png')}}" alt="" >            
             </div>
         </div>
 
@@ -90,23 +90,15 @@
 
     <div class="row mx-4 my-5 custom-text3" id="AboutUs">
         <div class="col">
+            <h1>About Us</h1>
             <p> OneVote is a secure online voting platform that makes it easy to run elections at a fraction of the usual cost. We're the leading provider of ranked choice elections, which help achieve more democratic outcomes by better representing the will of your voters.
             </p>
         </div>
     </div>
 
-    <!-- <div class="row mx-4 mt-3">
-        <div class="col-12 bg-secondary text-danger">
-            warning
-        </div>
-        <div class="col-12 my-2">
-            <p>Please do NOT use this form to register or re-register to vote if you are not 18+ or you are enrolled in a confidential address program such as safe at home. If sharing your address could put you in life-threatening danger, you may be eligible to register to vote confidential.
-            </p>
-            <p>For more information kindly visit any of our branch offices, call or whatsapp +2348000088800</p>
-        </div>
-    </div> -->
 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
+
     <footer class="mt-4">
         <div class="row">
             <div class="col-lg-3 text-light" id="footerBg1">
@@ -154,7 +146,71 @@
         </div>
 
     </footer>
-</div>
+    
+</div> -->
+
+    <!-- Footer -->
+<footer class="bg-success text-center text-white">
+
+    <!-- Section: Form -->
+    <section class="pt-5">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example21" class="form-control" placeholder="enter email" />
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-outline-light mb-4">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+      
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a href="https://www.facebook.com"><img class="img-fluid px-3" id="SMI" src="{{ asset('image/facebook.png')}}" alt=""></a>
+
+      <!-- Twitter -->
+      <a href="https://twitter.com"><img class="img-fluid px-3" id="SMI" src="{{ asset('image/twitter.png')}}" alt=""></a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com"><img class="img-fluid px-3" id="SMI" src="{{ asset('image/instagram.png')}}" alt=""></a>
+
+    </section>
+    <!-- Section: Social media -->
+
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright: ONEVOTE
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
 
 
 
