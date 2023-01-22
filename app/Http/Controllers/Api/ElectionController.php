@@ -36,7 +36,7 @@ class ElectionController extends Controller
     }
 
     public function show($id){
-        $election = Election::where('id',$id)->with('contestant')->first();
+        $election = Election::where('id',$id)->with('contestants')->first();
         return response()->json([
             'success' => true,
             'data' => $election
