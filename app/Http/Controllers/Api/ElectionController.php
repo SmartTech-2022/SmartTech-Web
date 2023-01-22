@@ -27,11 +27,14 @@ class ElectionController extends Controller
 
         $election_id = $request->election_id;
         $election = Election::findOrFail($election_id);
-        $contestants = $election->contestants;
+        // $contestants = $election->name;
+        $contestants = Contestant::where('election_id', $election_id);
+        // $contestants = Contestant::where('election_id', $election);
+        // $contestants = $election->contestants;
 
         return response()->json([
             'success' => true,
-            'data' => $contestants
+            'data' => $contestants->name
         ]);
     }
 
