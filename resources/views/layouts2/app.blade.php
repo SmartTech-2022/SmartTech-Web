@@ -27,7 +27,7 @@
 
         <nav class="navbar navbar-expand-lg bg-light navbar-light  sticky-top" id="navbar1">
               <div id="brand-container" >
-              <a class="navbar-brand" href="#"><img src="{{ asset('image/logo.svg')}}" alt=""></a>
+              <a class="navbar-brand" href="#"><img src="{{ asset('image/logo.png')}}" alt=""></a>
               </div>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
