@@ -1,12 +1,15 @@
 <?php
 
 namespace App\Http\Controllers\Adminpanel;
-use App\Http\Controllers\Controller;
- use App\Http\Controllers\Adminpanel\FrontController;
 use App\Models\User;
+
+use App\Models\Vote;
 use App\Models\Users;
 
+use App\Models\Election;
+use App\Models\Contestant;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class FrontController extends Controller
 {
@@ -23,9 +26,20 @@ class FrontController extends Controller
 
 
     public function adminindex() {
-        return view('admin.index');
-    }
+        // return view('admin.index');
+        $total_contestants = Contestant::count();
+        $total_voters = User::where('ís_Admin', 0)->count();
+        $total_election = Election::count();
+        $total_votes = Vote::count();
 
+            return view('admin.index',[
+                'total_contestants' => $total_contestants,
+                'total_voters' => $total_voters,
+                'total_election' => $total_election,
+                'total_votes' => $total_votes,
+            ]);
+
+    }
 
 
     public function about(){

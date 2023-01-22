@@ -8,7 +8,7 @@
                 <div class="card">
                     <div class="card-header">
                         <i class="fa fa-align-justify"></i>
-                        <a class="btn btn-success btn-spinner btn-sm pull-right m-b-0" href="{{ }}" role="button"><i class="fa fa-plus"></i></a>
+                        <a class="btn btn-success btn-spinner btn-sm pull-right m-b-0" href="" role="button"><i class="fa fa-plus"></i></a>
                     </div>
                     <div class="card-body" >
                         <span>
@@ -25,23 +25,21 @@
                         </div>
 
 
-                        <table class="table table-hover table-listing">
+                        <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th is='sortable' :column="'Contestant_name'"></th>
-                                    <th is='sortable' :column="'Election_name'"></th>
-
-
-
-                                    <th></th>
+                                    <th>Contestant_name</th>
+                                    <th>Election_name</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>{{ contestant.name }}</td>
-                                    <td>{{ contestant.Election_name}}</td>
 
-
+                                        @foreach ([$contestants as $contestant] [ $elections => $election])
+                                        <tr>
+                                        <td>  {{$contestant->name}}</td>
+                                 <td>  value={{$election->id}}->{{$election->name}}</td>
+                                </tr>
+                                    @endforeach
 
                                 </tr>
                             </tbody>
@@ -52,7 +50,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+
 
 
 @endsection
