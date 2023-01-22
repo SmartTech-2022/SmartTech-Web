@@ -10,24 +10,24 @@
             </div>
             <h4 id="p2-custom" class="roboto" id="futureVoting">Future voting systems, paving the path for worldwide expansion, precise analysis, and more top-notch services.
             </h4>
-
+            <div class="pb-4 d-flex justify-content-left">
+                <a href="#download">
+                    <button class="btn btn-success btn-lg px-5" type="submit">Get Started</button>
+                </a>
+            </div>
 
             </div>
         <div class="col-lg-5 col-md-5 col-sm-12 offset-lg-2 offset-md-2">
 
                 <div class="col d-flex justify-content-lg-center d-flex justify-content-md-center">
-                    <img class="img-fluid" src="{{ asset('image/webhero.svg')}}" alt="">
+                    <img class="img-fluid" src="{{ asset('image/webhero.png')}}" alt="">
                 </div>
 
 
 
             </div>
 
-            <div class="my-5 d-flex justify-content-left">
-                <a href="#download">
-                    <button class="btn btn-success btn-lg px-5" type="submit">Get Started</button>
-                </a>
-            </div>
+
         </div>
 
         <hr>
@@ -45,8 +45,8 @@
         </div>
     </div>
 
-<div class="row container fluid justify-content-left">
-        <div class=" container-fluid col-md-4">
+<div class="row container fluid d flex-justify-content-end">
+        <div class=" container-fluid col-md-4 ">
             <img class="img-fluid custom-height-100px" src="{{ asset('image/Group 2web.png')}}" alt="">
 
     </div>
