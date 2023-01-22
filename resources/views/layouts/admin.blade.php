@@ -75,7 +75,7 @@
 
 
 
-                    <li class="nav-item"><a class="nav-link" href="#"><i
+                    <li class="nav-item"><a class="nav-link" href="{{ route('election.home') }}"><i
                                 class="fas fa-user-circle"></i><span>Votes</span></a></li>
 
                     <li class="nav-item"> <a class="nav-link active" href="/"> <i

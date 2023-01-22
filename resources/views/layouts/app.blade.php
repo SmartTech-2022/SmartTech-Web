@@ -25,10 +25,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class=" active text-light" aria-current="page" href="/admin">Home</a>
+          <a class=" active text-light px-3" aria-current="page" href="/admin">Home</a>
         </li>
         <li class="nav-item">
-          <a class="text-light" href="{{ route('election.store') }}">Elections</a>
+          <a class="text-light px-3" href="{{ route('election.store') }}">Elections</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -52,6 +52,7 @@
       <li class="nav-item"><a href="/" class="px-2 text-light">Home</a></li>
       <li class="nav-item"><a href="/Elections" class="px-2 text-light">Elections</a></li>
     </ul>
+  
     <p class="text-center text-light">© 2023 eVotes powered by SmartTech, Inc</p>
   </footer>
 </div>

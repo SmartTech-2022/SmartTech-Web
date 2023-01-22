@@ -35,7 +35,7 @@
             </a>
         </div>
         <div class="col-md-6 py-3">
-            <a href="">
+            <a href="{{ route('election.home') }}">
 
 
               <div class="card-counter primary" style="height: 11rem;">
