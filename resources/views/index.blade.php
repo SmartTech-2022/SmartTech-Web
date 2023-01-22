@@ -5,12 +5,13 @@
     <div class="row mx-2 my-2">
         <div class="col-lg-5 col-md-5 col-sm-12 px-3">
             <div class="container">
-                <p id="p1-custom" class="roboto "><span class="typed-text">
+                <p id="p1-custom" class="roboto text-success"><span class="typed-text">
                     </span><span class="cursor"> </span></p>
             </div>
-            <h4 id="p2-custom" class="roboto" id="futureVoting">Future voting systems, paving the path for worldwide expansion, precise analysis, and more top-notch services.
+            <h4  class="roboto pb-4 mb-4" id="futureVoting">Future voting systems, paving the path for worldwide expansion, precise analysis, and more top-notch services.
             </h4>
             <div class="pb-4 d-flex justify-content-left">
+                <br>
                 <a href="#download">
                     <button class="btn btn-success btn-lg px-5" type="submit">Get Started</button>
                 </a>
@@ -37,10 +38,11 @@
 
     <div class="row" id="download">
         <div style="font-family: 'Roboto'; font-style: normal; font-weight: 400; font-size: 23px; line-height: 162.69%; text-align: justify; color: #000000;">
-            <p class="card card-body"> Vote for your Favourite Candidate or Political Party.
-                If you are a registered voter kindly download our app on
-                Google Play store or  Appstore to  log in and cast your vote.
+            <p class="card card-body">
+                If you are already a Registered Voter Kindly Download our App on
+                Google Play store or  Appstore to  Log in, Vote for your Preferred Candidate or Political Party and also View Election Results.
             </p>
+
 
         </div>
     </div>
@@ -154,7 +156,7 @@
 </div> -->
 
     <!-- Footer -->
-<footer class="bg-success text-center text-white">
+<footer class=" text-center text-white" style="background-color:#027314; ">
 
     <!-- Section: Form -->
     <section class="pt-5">
