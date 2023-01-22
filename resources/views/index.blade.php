@@ -39,7 +39,7 @@
     <div class="row" id="download">
         <div style="font-family: 'Roboto'; font-style: normal; font-weight: 400; font-size: 23px; line-height: 162.69%; text-align: justify; color: #000000;">
             <p class="card card-body">
-                If you are already a Registered Voter Kindly Download our App on
+                If you are already a Registered Voter, Kindly Download our App on
                 Google Play store or  Appstore to  Log in, Vote for your Preferred Candidate or Political Party and also View Election Results.
             </p>
 
