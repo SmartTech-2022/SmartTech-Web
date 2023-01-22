@@ -27,19 +27,16 @@ class ElectionController extends Controller
 
         $election_id = $request->election_id;
         $election = Election::findOrFail($election_id);
-        // $contestants = $election->name;
-        $contestants = Contestant::where('election_id', $election_id);
-        // $contestants = Contestant::where('election_id', $election);
-        // $contestants = $election->contestants;
+        $contestants = $election->contestants;
 
         return response()->json([
             'success' => true,
-            'data' => $contestants->name
+            'data' => $contestants
         ]);
     }
 
     public function show($id){
-        $election = Election::where('id',$id)->with('contestant')->first();
+        $election = Election::where('id',$id)->with('contestants')->first();
         return response()->json([
             'success' => true,
             'data' => $election
