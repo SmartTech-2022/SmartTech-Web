@@ -66,19 +66,19 @@
 
 
   .container p {
-    font-size: 3rem;
+    font-size: 4rem;
     padding: 0.5rem;
-    font-weight: bold;
+    font-weight: bolder;
     letter-spacing: 0.1rem;
     text-align: left;
     overflow: hidden;
   }
   .container p span.typed-text {
-    font-weight: normal;
+    font-weight:bolder;
     color: #027314;
   }
   .container p span.cursor {
-    display: inline-block;
+    display: block;
     background-color: #027314;
     color: #027314;
 

@@ -2,71 +2,72 @@
 
 @section('content')
 
-    <div class="row mx-4 my-5">
-        <div class="col-lg-5 col-md-5 col-sm-12 px-5">
+    <div class="row mx-2 my-2">
+        <div class="col-lg-5 col-md-5 col-sm-12 px-3">
             <div class="container">
                 <p id="p1-custom" class="roboto "><span class="typed-text">
                     </span><span class="cursor"> </span></p>
             </div>
-            <h6 id="p2-custom" class="roboto" id="futureVoting">Future voting systems, paving the path for worldwide expansion, precise analysis, and more top-notch services.
-            </h6>
-                <div class="my-5 d-flex justify-content-left">
-                    <a href="#download">
-                        <button class="btn btn-success btn-lg px-5" type="submit">Get Started</button>
-                    </a>
+            <h4 id="p2-custom" class="roboto" id="futureVoting">Future voting systems, paving the path for worldwide expansion, precise analysis, and more top-notch services.
+            </h4>
+<hr>
+
+            </div>
+        <div class="col-lg-5 col-md-5 col-sm-12 offset-lg-2 offset-md-2">
+
+                <div class="col d-flex justify-content-lg-center d-flex justify-content-md-center">
+                    <img class="img-fluid" src="{{ asset('image/webhero.svg')}}" alt="">
                 </div>
+
+
+
+            </div>
+
+            <div class="my-5 d-flex justify-content-left">
+                <a href="#download">
+                    <button class="btn btn-success btn-lg px-5" type="submit">Get Started</button>
+                </a>
             </div>
         </div>
-        <div class="col-lg-5 col-md-5 col-sm-12 offset-lg-2 offset-md-2">
-            <div class="row">
-                <div class="col d-flex justify-content-lg-center d-flex justify-content-md-center">
-                    <img class="img-fluid" src="{{ asset('image/laptop.png')}}" alt="">
-                </div>
-            </div>
-            <div class="row d-flex justify-content-lg-around d-flex justify-content-md-around">
-                <div class="col-lg-4 col-md-4">
-                    <img class="img-fluid" src="{{ asset('image/undraw_voting_nvu7.png')}}" alt="">
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <img class="img-fluid" src="{{ asset('image/phone.png')}}" alt="">
-                </div>
-            </div>
 
-            <div class="row d-flex justify-content-lg-center d-flex justify-content-md-center">
-                <div class="col-lg-4 col-md-4">
-                    <img class="img-fluid" src="{{ asset('image/lady standing.png')}}" alt="">
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <img class="img-fluid" src="{{ asset('image/undraw_selecting_team_re_ndkb.png')}}" alt="">
-                </div>
-            </div>
-    
-            </div>
-        </div><br>
-        
+        <hr>
 
 
 
-    <div class="row mx-4 my-5" id="download">
+
+    <div class="row" id="download">
         <div style="font-family: 'Roboto'; font-style: normal; font-weight: 400; font-size: 23px; line-height: 162.69%; text-align: justify; color: #000000;">
-            <p> Vote for your favourite Candidate or political Party, If you’re a registered voter kindly download our app in Google Play store or Apple Appstore, simply log in and cast your vote.
+            <p class="card card-body"> Vote for your Favourite Candidate or Political Party.
+                If you are a registered voter kindly download our app on
+                Google Play store or  Appstore to  log in and cast your vote.
             </p>
+
         </div>
     </div>
 
-    <div class="row mx-4 mt-3">
+<div class="row container fluid justify-content-left">
+        <div class=" container-fluid col-md-4">
+            <img class="img-fluid custom-height-100px" src="{{ asset('image/Group 2web.png')}}" alt="">
+
+    </div>
+    <br>
+    <div class="row  m-4 p-4  ">
         <div class="col">
             <a href="http://play.google.com">
                 <img class="img-fluid custom-height" src="{{ asset('image/playstoreButton.png')}}" alt="" >
             </a>
-            
         </div>
-        <div class="col d-flex justify-content-end">
+
+
+
+        <div class="col">
             <a href="https://www.apple.com ">
                 <img class="img-fluid custom-height" src="{{ asset('image/appstoreButton.png')}}" alt="" >
-            </a>     
+            </a>
         </div>
-    </div><br>
+        <br>
+    </div>
+</div>   <hr>
 
 
 
@@ -75,29 +76,30 @@
                 <div id="whyChooseUs" class="roboto">Why Choose Us</div>
             </div>
         </div>
-         
+
         <div class="row mx-4 mt-3">
             <div class="col-lg-4 col-md-6 d-flex justify-content-center">
-                <img class="img-fluid p-3" id="WCUI" src="{{ asset('image/Group 82.png')}}" alt="" >            
+                <img class="img-fluid p-3" id="WCUI" src="{{ asset('image/Group 82.png')}}" alt="" >
             </div>
             <div class="col-lg-4 col-md-6 d-flex justify-content-center">
-                <img class="img-fluid p-3" id="WCUI" src="{{ asset('image/Group 83.png')}}" alt="" >            
+                <img class="img-fluid p-3" id="WCUI" src="{{ asset('image/Group 83.png')}}" alt="" >
             </div>
             <div class="col-lg-4 col-md-12 d-flex justify-content-center">
-                <img class="img-fluid p-3" id="WCUI" src="{{ asset('image/Group 84.png')}}" alt="" >            
+                <img class="img-fluid p-3" id="WCUI" src="{{ asset('image/Group 84.png')}}" alt="" >
             </div>
         </div>
+    <hr>
 
 
 
-    <div class="row mx-4 my-5" id="AboutUs" style="font-family: 'Roboto'; font-style: normal; font-weight: 400; font-size: 23px; line-height: 162.69%; text-align: justify; color: #000000;">
-        <div class="col">
-            <h1>About Us</h1>
-            <p> OneVote is a secure online voting platform that makes it easy to run elections at a fraction of the usual cost. We're the leading provider of ranked choice elections, which help achieve more democratic outcomes by better representing the will of your voters.
+    <div class="row mx-4 my-5"   style="font-family: 'Roboto'; font-style: normal; font-weight: 400; font-size: 23px; line-height: 162.69%;  color: #000000;">
+        <div class="col" >
+            <h1 id="AboutUs" class="d-flex justify-content-center">About Us</h1>
+            <p class="card card-body "> OneVote is a secure online voting platform that makes it easy to run elections at a fraction of the usual cost. We're the leading provider of ranked choice elections, which help organisations achieve a more democratic outcome by better representing the will of the voters.
             </p>
         </div>
     </div>
-
+<hr>
 
 <!-- <div class="container-fluid">
 
@@ -107,8 +109,8 @@
                 <div class="m-3" class="roboto">
                     SiteMap
                     Career Opportunities
-                    Site Maintenance Schedules 
-                    Language Access Complaint Form 
+                    Site Maintenance Schedules
+                    Language Access Complaint Form
                     Guidelines For Access to Public Record
                 </div>
             </div>
@@ -143,12 +145,12 @@
                    </label>
                  </div>
                  <button type="submit" class="btn btn-primary mx-3 my-2" class="roboto">Submit</button>
-             </form>            
+             </form>
             </div>
         </div>
 
     </footer>
-    
+
 </div> -->
 
     <!-- Footer -->
@@ -171,7 +173,7 @@
           <div class="col-md-5 col-12">
             <!-- Email input -->
             <div class="form-outline form-white mb-4">
-              <input type="email" id="form5Example21" class="form-control" placeholder="enter email" />
+              <input type="email" id="form5Example21" class="form-control" placeholder="Enter Your Email Address Here" />
             </div>
           </div>
           <!--Grid column-->
@@ -189,7 +191,7 @@
       </form>
     </section>
     <!-- Section: Form -->
-      
+
     <!-- Section: Social media -->
     <section class="mb-4">
       <!-- Facebook -->
@@ -208,7 +210,7 @@
 
   <!-- Copyright -->
   <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2022 Copyright: ONEVOTE
+    © 2023 eVotes powered by SmartTech, Inc
   </div>
   <!-- Copyright -->
 </footer>
@@ -218,6 +220,6 @@
 
 
 </section>
-                        
+
 
 @endsection

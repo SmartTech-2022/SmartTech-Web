@@ -12,7 +12,7 @@
 
  <div class="col-md-6 offset-md-2">
 
-    <div class="card p-2 m-3 md-shadow">
+    <div class="card p-2 m-3 shadow-md">
  <h6>   Add a Contestant   </h6>
 
      <form method="POST" action="{{ route('contestant.store') }}" class="border py-3 px-3 rounded" enctype="multipart/form-data">

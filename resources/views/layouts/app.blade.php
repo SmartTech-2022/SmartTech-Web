@@ -17,8 +17,8 @@
 
     <nav class="navbar navbar-expand-lg" style="background: #027314">
   <div class="container-fluid">
-    <div class="sidebar-brand-text mx-0 ">
-        <img src="{{asset('image/logo.jpg')}}" width="200px"  alternative="logo"/></div>
+    <div class="sidebar-brand-text mx-1 ">
+        <img src="{{asset('img/Logo.png')}}" width="150px"  alternative="logo"/></div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

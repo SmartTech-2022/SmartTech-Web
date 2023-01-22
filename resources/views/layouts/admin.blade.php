@@ -31,8 +31,8 @@
             <div class="container-fluid d-flex flex-column px-0"><a
                     class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand mx-0"
                     href="#">
-                    <div class="sidebar-brand-text mx-0 ">
-                        <img src="{{ asset('image/logo.png') }}" width="200px" alternative="logo" />
+                    <div class="sidebar-brand-text m-1 p-2 ">
+                        <img src="{{ asset('img/Logo.png') }}" width="150px" alternative="logo" class="align-center" />
                     </div>
                 </a>
                 <hr class="sidebar-divider my-0">
@@ -136,8 +136,8 @@
             @yield('navbar')
 
 
-            <footer style="margin-top: 150px">
-                <p class="text-center text-muted">© 2023 eVotes powered by SmartTech, Inc</p>
+            <footer style="margin-top: 200px">
+                <h5 class="text-center text-muted">© 2023 eVotes powered by SmartTech, Inc</h5>
             </footer>
 
 
