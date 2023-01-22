@@ -12,8 +12,12 @@ class ContestantController extends Controller
         public function show($id)
         {
             $contestant = Contestant::findOrFail($id);
-            return view('contestants.show', ['contestant' => $contestant]);
-        }
+            // return view('contestants.show', ['contestant' => $contestant]);
+            return response()->json([
+                'success' => true,
+                'data' => $contestant
+            ]);
     }
+}
 
 

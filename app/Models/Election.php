@@ -12,10 +12,10 @@ class Election extends Model
 
 
 
-   
+
 
     protected $guarded = ['id'];
-    public function contestant()
+    public function contestants()
 
     {
         return $this->hasMany(Contestant::class);
