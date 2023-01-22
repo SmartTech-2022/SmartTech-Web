@@ -10,7 +10,7 @@
             </div>
             <h4 id="p2-custom" class="roboto" id="futureVoting">Future voting systems, paving the path for worldwide expansion, precise analysis, and more top-notch services.
             </h4>
-<hr>
+
 
             </div>
         <div class="col-lg-5 col-md-5 col-sm-12 offset-lg-2 offset-md-2">
@@ -52,7 +52,7 @@
     </div>
     <br>
     <div class="row  m-4 p-4  ">
-        <div class="col">
+        <div class="col-auto">
             <a href="http://play.google.com">
                 <img class="img-fluid custom-height" src="{{ asset('image/playstoreButton.png')}}" alt="" >
             </a>
@@ -60,7 +60,7 @@
 
 
 
-        <div class="col">
+        <div class="col-auto">
             <a href="https://www.apple.com ">
                 <img class="img-fluid custom-height" src="{{ asset('image/appstoreButton.png')}}" alt="" >
             </a>
