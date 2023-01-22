@@ -25,9 +25,9 @@
 <body>
     <div class="container-fluid">
 
-        <nav class="navbar navbar-expand-lg bg-light navbar-light m-4 sticky-top" id="navbar1">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light  sticky-top" id="navbar1">
               <div id="brand-container" >
-              <a class="navbar-brand" href="#"><img src="{{ asset('image/logo.png')}}" alt=""></a>
+              <a class="navbar-brand" href="#"><img src="{{ asset('image/logo.svg')}}" alt=""></a>
               </div>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,13 +36,13 @@
                 <div class="">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0" nav-items>
                       <li class="nav-item">
-                        <a class="nav-link custom-text-success" aria-current="page" href="#" class="roboto">Home</a>
+                        <a class="nav-link text-success "roboto"" aria-current="page" href="#" >Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link custom-text-dark" id="campaign" href="#" class="roboto">Campaign</a>
+                        <a class="nav-link custom-text-dark roboto" id="campaign" href="#" >Campaign</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link custom-text-dark" href="#voteForYour" class="roboto">About Us</a>
+                        <a class="nav-link custom-text-dark roboto" href="#voteForYour" >About Us</a>
                       </li>
                       <li class="nav-item btn btn-sm mx-2">
                         <form role="search">
