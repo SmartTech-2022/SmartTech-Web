@@ -22,23 +22,23 @@
                         <option value="25">25</option>
 
                     </select>
-                </div>
+                </div class="mb-2">
 
 
                 <table class="table table-bordered">
                     <thead>
                         <tr>
 
-                            <th> Election_name</th>
-                            <th>Active</th>
+                            <th> Contestant Name </th>
+                            <th>Votes</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($elections as $election)
+                        @foreach ($elections->contestant as $election)
                         <tr>
-                            <td> <a href="{{route('election.show',$election->id)}}">
-                                {{$election->name}}</a></td>
-                            <td> {{$election->active ? 'Yes' : 'No'}}</td>
+                            <td>
+                                {{$election->name}}</td>
+                            <td> {{$election->contestant_vote}}</td>
                         </tr>
                         @endforeach
                     </tbody>

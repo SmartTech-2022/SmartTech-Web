@@ -3,13 +3,14 @@
 namespace App\Http\Controllers\Adminpanel;
 
 use App\Models\User;
-use Illuminate\Support\Str;
+use App\Mail\UserCreated;
 
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Auth;
-use App\Mail\UserCreated;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
@@ -17,7 +18,13 @@ use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
+public function index(){
+    Paginator::useBootstrap();
+    $users = User::paginate();
+    $user= auth()->user();
 
+    return view('users.index', ['users'=> $users]);
+}
 
     public function create() {
 
@@ -41,14 +48,14 @@ class UserController extends Controller
         $voter_id = 'SMT'.'/'.strtoupper(Str::random(3)).'/'.rand(10000,99999);
         User::create(array_merge($valid, ['voter_id'=>$voter_id, 'password' => bcrypt($valid['password'])]));
        session()->flash('message', 'Voter Created Successfully');
-        return redirect()->route('home')->withInput($request->input());
+        return redirect()->route('user.home')->withInput($request->input())->with('message', 'Account Created');
 
 
-        $voter_id = 'SMT'.strtoupper(Str::random(3)).'/'.rand(10000,99999);
+        $voter_id = 'SMT'.'/'.strtoupper(Str::random(3)).'/'.rand(10000,99999);
         $user = User::create(array_merge($valid, ['voter_id'=>$voter_id, 'password' => bcrypt($valid['password'])]));
         // dd($valid);
         Mail::to($user)->send(new UserCreated($user, $valid));
-        return redirect()->back()->withInput($request->input())->with('message', 'Account Created');
+        return redirect()->route('user.home')->withInput($request->input())->with('message', 'Account Created');
 
 
 
@@ -82,7 +89,7 @@ public function show(){
     public function destroy($id){
         $user = User::findOrFail($id);
         $user->delete();
-        return redirect()->route('home')->with('message', 'User Deleted');
+        return redirect()->route('user.home')->with('message', 'User Deleted');
     }
 
 
@@ -93,7 +100,7 @@ public function show(){
         ]);
         // Attempt to authenticate the user
         $user = User::where('email', $request->input('email'))->first();
-        if(!Hash::check($request->input('password'), $user->password)){
+        if( !$user || !Hash::check($request->input('password'), $user->password)){
             return redirect()->back()->withInput($request->input())->with('message', 'Login Details Does not Exist');
         }
         Auth::login($user);

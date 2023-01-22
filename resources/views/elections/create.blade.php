@@ -27,8 +27,8 @@
                     <small class="text-danger"> {{ $message }}</small>
                 @enderror
             </div>
-            <div class="mt-3">
-                <label for="active" class="form-label">Active</label>
+            <hr>
+            <div class="mb-3">
                 <select name="active" id="" class="form-control">
                     <option value="">Is the election  active?</option>
                     <option value="0">No</option>

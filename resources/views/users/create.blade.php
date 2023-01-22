@@ -42,6 +42,17 @@
                     <small class="text-danger"> {{ $message }}</small>
                 @enderror
             </div>
+            <hr>
+            <div class="mb-3">
+
+                <select name="gender" id="" class="form-control">
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <hr>
+            
             <div class="mb-3">
 
                 <input  type="password" class="form-control @error('password') is-invalid @enderror" name="password"  id="password"placeholder="Password">

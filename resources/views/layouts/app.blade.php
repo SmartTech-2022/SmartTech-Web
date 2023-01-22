@@ -17,18 +17,18 @@
 
     <nav class="navbar navbar-expand-lg" style="background: #027314">
   <div class="container-fluid">
-    <div class="sidebar-brand-text mx-0 ">
-        <img src="{{asset('image/logo.jpg')}}" width="200px"  alternative="logo"/></div>
+    <div class="sidebar-brand-text mx-1 ">
+        <img src="{{asset('img/Logo.png')}}" width="150px"  alternative="logo"/></div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active text-light" aria-current="page" href="/admin">Home</a>
+          <a class=" active text-light" aria-current="page" href="/admin">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="{{ route('election.store') }}">Elections</a>
+          <a class="text-light" href="{{ route('election.store') }}">Elections</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -38,16 +38,19 @@
     </div>
   </div>
 </nav>
-        @yield('content')
-        @yield('users')
+@yield('content')
+@yield('users')
+@yield('elections')
+@yield('contestants')
+@yield('votes')
+@yield('navbar')
 
 <div style="background: #027314">
 <div class="container">
   <footer class="py-3 my-4">
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-      <li class="nav-item"><a href="/" class="nav-link px-2 text-light">Home</a></li>
-      <li class="nav-item"><a href="/Elections" class="nav-link px-2 text-light">Elections</a></li>
-      {{-- <li class="nav-item"><a href="#" class="nav-link px-2 text-light">About</a></li> --}}
+      <li class="nav-item"><a href="/" class="px-2 text-light">Home</a></li>
+      <li class="nav-item"><a href="/Elections" class="px-2 text-light">Elections</a></li>
     </ul>
     <p class="text-center text-light">© 2023 eVotes powered by SmartTech, Inc</p>
   </footer>
