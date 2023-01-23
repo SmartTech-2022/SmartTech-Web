@@ -42,7 +42,7 @@ class ElectionController extends Controller
             }
 
          public function show($id){
-            $election = Election::where('id', $id)->with('contestant')->first();
+            $election = Election::where('id', $id)->with('contestants')->first();
             // dd($election);
             //  $election = Election::where('name', $name)->first();
              return view('elections.election', ['elections' => $election]);
