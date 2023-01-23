@@ -34,7 +34,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($elections->contestant as $election)
+                        @foreach ($elections->contestants as $election)
                         <tr>
                             <td>
                                 {{$election->name}}</td>
